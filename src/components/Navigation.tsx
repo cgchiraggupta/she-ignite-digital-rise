@@ -16,6 +16,7 @@ const Navigation = () => {
     { name: "Success Stories", href: "/success-stories" },
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
+    { name: "Events", href: "/events" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
