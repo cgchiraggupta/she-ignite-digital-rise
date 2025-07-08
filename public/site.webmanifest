@@ -1,0 +1,32 @@
+{
+  "name": "SHELeadsIndia - Empowering Women Entrepreneurs",
+  "short_name": "SHELeadsIndia",
+  "description": "SHELeads has created a business solution specially designed for women entrepreneurs and professionals with an offering that aims to help them set up their businesses in the digital world.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E60023",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "any"
+    },
+    {
+      "src": "/she-leads-logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "categories": ["business", "education", "productivity"],
+  "lang": "en-IN",
+  "scope": "/",
+  "id": "sheleadsindia"
+} 

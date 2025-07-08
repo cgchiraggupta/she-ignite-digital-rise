@@ -79,7 +79,7 @@ export default function EventDetails() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-foreground mb-4">Event Not Found</h1>
-            <p className="text-red-500 mb-6">{error || "The event you're looking for doesn't exist."}</p>
+            <p className="mb-6" style={{ color: '#E60023' }}>{error || "The event you're looking for doesn't exist."}</p>
             <Button onClick={() => navigate("/events")} variant="outline">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Events

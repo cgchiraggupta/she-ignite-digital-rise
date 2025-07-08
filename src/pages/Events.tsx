@@ -46,41 +46,45 @@ export default function Events() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="min-h-screen bg-background flex flex-col">
+        <Navigation />
+        <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
             <p className="mt-4 text-muted-foreground">Loading events...</p>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="min-h-screen bg-background flex flex-col">
+        <Navigation />
+        <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <p className="text-red-500">{error}</p>
+            <p style={{ color: '#E60023' }}>{error}</p>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
       
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary/10 to-primary/5">
+      <div style={{ background: '#E60023' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Upcoming Events
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-6 text-lg leading-8 text-white max-w-2xl mx-auto">
               Join us for empowering workshops, networking events, and educational sessions 
               designed to help women entrepreneurs thrive in the digital age.
             </p>
@@ -89,7 +93,8 @@ export default function Events() {
       </div>
 
       {/* Events Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="flex-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {events.length === 0 ? (
           <div className="text-center py-12">
             <Calendar className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
@@ -168,6 +173,7 @@ export default function Events() {
             ))}
           </div>
         )}
+        </div>
       </div>
       
       <Footer />

@@ -51,7 +51,7 @@ const BlogPost = () => {
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 text-white" style={{ background: 'linear-gradient(135deg, rgb(230, 0, 35), rgb(204, 0, 31))' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Button 
@@ -134,7 +134,7 @@ const BlogPost = () => {
       {/* Newsletter Signup */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto">
+                      <div className="rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Never Miss an Insight
             </h3>

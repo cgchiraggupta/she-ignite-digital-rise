@@ -99,7 +99,7 @@ const SuccessStories = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 text-white" style={{ background: 'linear-gradient(135deg, rgb(230, 0, 35), rgb(204, 0, 31))' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -123,7 +123,7 @@ const SuccessStories = () => {
                 const IconComponent = stat.icon;
                 return (
                   <div key={index}>
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                       <IconComponent className="h-6 w-6 text-primary" />
                     </div>
                     <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
@@ -169,7 +169,7 @@ const SuccessStories = () => {
                       
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                         {Object.entries(story.metrics).map(([key, value]) => (
-                          <div key={key} className="text-center p-3 bg-primary/5 rounded-lg">
+                          <div key={key} className="text-center p-3 rounded-lg" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
                             <div className="font-semibold text-primary">{value}</div>
                           </div>
                         ))}
@@ -182,8 +182,8 @@ const SuccessStories = () => {
                     </div>
                     
                     <div className="bg-gradient-section p-8 lg:p-12 flex items-center justify-center">
-                      <div className="w-48 h-48 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Users className="h-24 w-24 text-primary/30" />
+                      <div className="w-48 h-48 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                        <Users className="h-24 w-24" style={{ color: 'rgba(230, 0, 35, 0.3)' }} />
                       </div>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ const SuccessStories = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center">
+                      <div className="rounded-2xl p-8 md:p-12 text-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Your Success Story Starts Here
             </h3>

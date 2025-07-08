@@ -34,7 +34,7 @@ const StartHere = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 text-white" style={{ background: 'linear-gradient(135deg, rgb(230, 0, 35), rgb(204, 0, 31))' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -65,7 +65,7 @@ const StartHere = () => {
             {cities.map((city, index) => (
               <Card key={index} className="hover:shadow-elegant transition-all duration-300 hover:scale-105 cursor-pointer group">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                     <MapPin className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-2xl">{city.name}</CardTitle>
@@ -105,7 +105,7 @@ const StartHere = () => {
             {steps.map((step, index) => (
               <div key={index} className="text-center relative">
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-16 left-1/2 w-full h-0.5 bg-primary/20 transform translate-x-8" />
+                  <div className="hidden md:block absolute top-16 left-1/2 w-full h-0.5 transform translate-x-8" style={{ backgroundColor: 'rgba(230, 0, 35, 0.2)' }} />
                 )}
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
@@ -123,7 +123,7 @@ const StartHere = () => {
       {/* Free Resources CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center">
+                      <div className="rounded-2xl p-8 md:p-12 text-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to Get Started?
             </h3>

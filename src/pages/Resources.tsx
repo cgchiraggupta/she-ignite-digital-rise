@@ -74,7 +74,7 @@ const Resources = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 text-white" style={{ background: 'linear-gradient(135deg, rgb(230, 0, 35), rgb(204, 0, 31))' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -113,7 +113,7 @@ const Resources = () => {
                   </div>
                   
                   <CardHeader className="pb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                       <IconComponent className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl mb-2">{resource.title}</CardTitle>
@@ -171,7 +171,7 @@ const Resources = () => {
               return (
                 <Card key={index} className="text-center hover:shadow-card transition-all duration-300 hover:scale-105 cursor-pointer group">
                   <CardHeader>
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                       <IconComponent className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl mb-2">{category.title}</CardTitle>
@@ -196,7 +196,7 @@ const Resources = () => {
       {/* Newsletter Signup */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center">
+                      <div className="rounded-2xl p-8 md:p-12 text-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Get New Resources First
             </h3>

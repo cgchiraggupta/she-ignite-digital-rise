@@ -43,10 +43,15 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background p-4">
         <div className="w-full max-w-4xl">
-          <div className="mb-4">
+          <div className="mb-4 flex items-center gap-4">
             <Button variant="outline" onClick={() => setShowDiagnostic(false)}>
               ← Back to Login
             </Button>
+            <img 
+              src="/she-leads-logo.png" 
+              alt="SHE Leads India" 
+              className="h-8 w-auto object-contain"
+            />
           </div>
           <SupabaseTest />
         </div>
@@ -58,6 +63,13 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
+          <div className="flex justify-center mb-4">
+            <img 
+              src="/she-leads-logo.png" 
+              alt="SHE Leads India" 
+              className="h-16 w-auto object-contain"
+            />
+          </div>
           <CardTitle className="text-2xl font-bold">Admin Login</CardTitle>
           <p className="text-muted-foreground">Access the blog admin panel</p>
         </CardHeader>

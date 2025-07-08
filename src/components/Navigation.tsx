@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: "Home", href: "/" },
     { name: "Start Here", href: "/start-here" },
     { name: "Programs", href: "/programs" },
+    { name: "Upcoming Training", href: "/upcoming-training" },
     { name: "Resources", href: "/resources" },
     { name: "Success Stories", href: "/success-stories" },
     { name: "About", href: "/about" },
@@ -28,13 +29,16 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <motion.div 
-              className="bg-gradient-hero text-primary-foreground font-bold text-2xl px-3 py-1 rounded"
-              whileHover={{ scale: 1.1 }}
+              className="flex items-center"
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              SHE
+              <img 
+                src="/she-leads-logo.png" 
+                alt="SHE Leads India" 
+                className="h-12 w-auto object-contain"
+              />
             </motion.div>
-            <span className="font-bold text-xl text-foreground">LeadsIndia</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -92,7 +96,7 @@ const Navigation = () => {
                   to={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActive(item.href)
-                      ? "text-primary bg-primary/10"
+                      ? "text-white hero-button"
                       : "text-muted-foreground hover:text-primary hover:bg-muted"
                   }`}
                   onClick={() => setIsOpen(false)}

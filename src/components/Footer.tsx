@@ -1,155 +1,149 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MapPin, Mail, Phone, Instagram, Linkedin, Facebook } from "lucide-react";
+import { MapPin, Mail, Phone, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => {
-  const quickLinks = [
-    { name: "Start Here", href: "/start-here" },
-    { name: "Programs", href: "/programs" },
-    { name: "Resources", href: "/resources" },
-    { name: "Success Stories", href: "/success-stories" },
-  ];
-
-  const cities = [
-    { name: "Pune", href: "/pune" },
-    { name: "Nagpur", href: "/nagpur" },
-    { name: "Nashik", href: "/nashik" },
-  ];
-
-  const resources = [
-    { name: "Growth Planner", href: "/resources/growth-planner" },
-    { name: "Brand Quiz", href: "/resources/brand-quiz" },
-    { name: "Launch Checklist", href: "/resources/launch-checklist" },
-    { name: "Blog", href: "/blog" },
-  ];
-
   return (
-    <footer className="bg-foreground text-background">
-      {/* Newsletter Section */}
-      <div className="border-b border-background/20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Join 500+ Women Entrepreneurs
-            </h3>
-            <p className="text-background/80 mb-8">
-              Get weekly strategies, success stories, and exclusive resources 
-              delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-md text-foreground bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+    <footer className="bg-black text-gray-300">
+      <div className="container mx-auto px-4 py-6">
+        <div className="grid md:grid-cols-4 gap-6">
+          <div className="space-y-4">
+            {/* Logo */}
+            <div className="mb-4">
+              <img 
+                src="/she-leads-logo.png" 
+                alt="SHE Leads India" 
+                className="h-16 w-auto object-contain brightness-0 invert opacity-80"
               />
-              <Button variant="hero" size="lg">
-                Subscribe
+            </div>
+            
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-white text-sm">
+                <Phone className="h-3 w-3" />
+                <span>+918806661434</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Mail className="h-3 w-3" />
+                <a href="mailto:info@shelladsindia.in" className="hover:underline" style={{ color: '#E60023' }}>
+                  info@shelladsindia.in
+                </a>
+              </div>
+              <div className="text-sm">
+                <div className="font-medium text-white text-sm">Femme Fusion Business Solutions</div>
+                <div className="text-xs mt-1">
+                  <a 
+                    href="https://g.co/kgs/1PiYFqt" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:underline text-gray-300 hover:text-white"
+                  >
+                    Address : Gateway, Opp. Agent Jack, Balewadi, Pune
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-medium text-white text-base mb-2">For More Information</h4>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <Link to="/" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <a 
+                  href="https://g.co/kgs/1PiYFqt" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 transition-colors hover:text-[#E60023]"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/cancellation-policy" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Cancellation Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-medium text-white text-base mb-2">Our Offerings</h4>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <Link to="/blog" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/events" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                  Membership
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-medium text-white text-base mb-2">Connect</h4>
+            <div className="flex space-x-2 mb-3">
+              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
+                <Facebook className="h-3 w-3" />
+              </Button>
+              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
+                <Youtube className="h-3 w-3" />
+              </Button>
+              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
+                <Instagram className="h-3 w-3" />
+              </Button>
+              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
+                <Linkedin className="h-3 w-3" />
               </Button>
             </div>
+            <p className="text-gray-300 text-xs leading-relaxed">
+              The passion behind SHELeads is immense...to work together as a team to empower and uplift women entrepreneurs.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div>
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="bg-gradient-hero text-primary-foreground font-bold text-xl px-2 py-1 rounded">
-                SHE
-              </div>
-              <span className="font-bold text-lg text-background">LeadsIndia</span>
-            </Link>
-            <p className="text-background/80 mb-6">
-              Empowering women entrepreneurs across India with digital marketing 
-              mastery and AI-powered business strategies.
-            </p>
-            <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="text-background hover:text-primary">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-background hover:text-primary">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-background hover:text-primary">
-                <Facebook className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-background/80 hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Cities */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Our Cities</h4>
-            <ul className="space-y-2">
-              {cities.map((city) => (
-                <li key={city.name}>
-                  <Link
-                    to={city.href}
-                    className="text-background/80 hover:text-primary transition-colors"
-                  >
-                    {city.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Resources</h4>
-            <ul className="space-y-2">
-              {resources.map((resource) => (
-                <li key={resource.name}>
-                  <Link
-                    to={resource.href}
-                    className="text-background/80 hover:text-primary transition-colors"
-                  >
-                    {resource.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="border-t border-background/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col md:flex-row gap-6 text-sm text-background/80">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Pune, Nagpur, Nashik</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <span>hello@shelleadsindia.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>+91 98765 43210</span>
-              </div>
-            </div>
-            <p className="text-sm text-background/60">
-              © 2024 SHELeadsIndia. All rights reserved.
-            </p>
+      <div className="bg-black border-t border-gray-700 py-2">
+        <div className="container mx-auto px-4">
+          <div className="text-center text-xs text-gray-300">
+            © Copyright Sheleads 2024 All rights reserved. Professional Website Developed & Digital Marketing by{" "}
+            <span style={{ color: '#E60023' }}>Dexcel Digital Hub Pvt Ltd.</span>
           </div>
         </div>
       </div>

@@ -5,13 +5,65 @@ import TestimonialCard from "@/components/TestimonialCard";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Users, Award, TrendingUp } from "lucide-react";
+import { ArrowRight, Download, Users, Award, TrendingUp, Mic, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-10%" });
+  
+  // Podcast carousel state
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const podcastEpisodes = [
+    {
+      id: 1,
+      title: "From Atta Chakki to Shark Tank | SHELeads India",
+      description: "Sangeeta dives into the ups and downs of entrepreneurship, her experience pitching on a national platform, and the lessons she's learned along the way.",
+      embedUrl: "https://www.youtube.com/embed/CfQk2FaS68A"
+    },
+    {
+      id: 2,
+      title: "Inspiring journey of a makeup artist | SHELeads India", 
+      description: "This episode is a must-watch for anyone seeking inspiration, insights, or the motivation to carve their own path!",
+      embedUrl: "https://www.youtube.com/embed/Cjtxwlz4uUI"
+    },
+    {
+      id: 3,
+      title: "The twenty year old solopreneur | SHELeads India",
+      description: "Meet an inspiring young entrepreneur who's building her empire at just twenty years old. Discover her secrets to success.",
+      embedUrl: "https://www.youtube.com/embed/tZxTcIwGpTA"
+    },
+    {
+      id: 4,
+      title: "Her Legacy: A Lawyer's Impact on RERA and Entrepreneurship | SHELeads India",
+      description: "Meet Adv. Amruta Salunke: Lawyer, RERA Expert, and Women Entrepreneur. A remarkable journey in a male-dominated industry.",
+      embedUrl: "https://www.youtube.com/embed/bsgUGK9pQ6U"
+    }
+  ];
+
+  // Auto-play carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % podcastEpisodes.length);
+    }, 3000); // 3 seconds per slide
+    
+    return () => clearInterval(timer);
+  }, [podcastEpisodes.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % podcastEpisodes.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + podcastEpisodes.length) % podcastEpisodes.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -138,9 +190,119 @@ const Index = () => {
         </div>
       </motion.section>
 
+      {/* Podcast Section */}
+      <motion.section 
+        className="py-20 bg-background"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-10%" }}
+        variants={fadeInUp}
+      >
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" variants={fadeInUp}>
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                <Mic className="h-8 w-8" style={{ color: '#E60023' }} />
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Podcast – 
+              <span className="block text-primary">Talks That Glow</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Dive into inspiring conversations with successful women entrepreneurs. 
+              Real stories, real struggles, and real victories that will ignite your entrepreneurial spirit.
+            </p>
+          </motion.div>
+
+          {/* Video Carousel */}
+          <motion.div 
+            className="relative max-w-lg mx-auto mb-12"
+            variants={fadeInUp}
+          >
+            {/* Compact Video Container */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-background">
+              <div className="aspect-video">
+                <iframe
+                  src={podcastEpisodes[currentSlide].embedUrl}
+                  title={podcastEpisodes[currentSlide].title}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              
+              {/* Video Info */}
+              <div className="p-4 bg-background">
+                <h3 className="text-lg font-bold mb-2 line-clamp-2">
+                  {podcastEpisodes[currentSlide].title}
+                </h3>
+                <p className="text-muted-foreground text-sm line-clamp-2">
+                  {podcastEpisodes[currentSlide].description}
+                </p>
+              </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+
+              {/* Episode Counter */}
+              <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                {currentSlide + 1} / {podcastEpisodes.length}
+              </div>
+            </div>
+
+            {/* Dots Navigation */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {podcastEpisodes.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    currentSlide === index 
+                      ? 'bg-primary scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+
+
+          </motion.div>
+
+          {/* CTA to Full Podcast Page */}
+          <motion.div className="text-center" variants={fadeInUp}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Button asChild variant="hero" size="xl" className="group">
+                <Link to="/podcast">
+                  <Mic className="h-5 w-5 mr-2" />
+                  Explore All Episodes
+                  <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
       {/* Lead Magnets Section */}
       <motion.section 
-        className="py-20 bg-gradient-section"
+        className="py-20 bg-gray-50"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-10%" }}
@@ -178,7 +340,7 @@ const Index = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition-colors" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                     <IconComponent className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4">{magnet.title}</h3>

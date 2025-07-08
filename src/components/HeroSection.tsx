@@ -69,7 +69,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm text-background px-4 py-2 rounded-full mb-6"
+                          className="inline-flex items-center gap-2 backdrop-blur-sm text-background px-4 py-2 rounded-full mb-6"
+              style={{ backgroundColor: 'rgba(230, 0, 35, 0.2)' }}
           >
             <MapPin className="h-4 w-4" />
             <span className="text-sm font-medium">Pune • Nagpur • Nashik</span>

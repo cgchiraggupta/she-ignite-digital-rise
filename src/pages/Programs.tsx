@@ -83,7 +83,7 @@ const Programs = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 text-white" style={{ background: 'linear-gradient(135deg, rgb(230, 0, 35), rgb(204, 0, 31))' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -115,7 +115,7 @@ const Programs = () => {
                   )}
                   
                   <CardHeader className="pb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                       <IconComponent className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-2xl mb-2">{program.title}</CardTitle>
@@ -181,7 +181,7 @@ const Programs = () => {
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
               <Award className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -212,7 +212,7 @@ const Programs = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center">
+                      <div className="rounded-2xl p-8 md:p-12 text-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Ready to Transform Your Business?
             </h3>

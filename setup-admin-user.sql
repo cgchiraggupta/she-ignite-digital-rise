@@ -1,10 +1,10 @@
 -- Run this SQL in your Supabase SQL Editor to create the admin user
--- This will create a user with email: work.ankit2@gmail.com and password: Ankit923@#
+-- This will create a user with email: [YOUR_ADMIN_EMAIL] and password: [YOUR_SECURE_PASSWORD]
 
 -- First, enable the auth extension if not already enabled
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
--- Create the user directly in auth.users table
+-- First, let's create the user in the auth.users table
 INSERT INTO auth.users (
   instance_id,
   id,
@@ -13,10 +13,11 @@ INSERT INTO auth.users (
   email,
   encrypted_password,
   email_confirmed_at,
-  confirmation_sent_at,
+  invited_at,
   confirmation_token,
-  recovery_sent_at,
+  confirmation_sent_at,
   recovery_token,
+  recovery_sent_at,
   email_change_token_new,
   email_change,
   email_change_sent_at,
@@ -40,25 +41,26 @@ INSERT INTO auth.users (
   deleted_at
 ) VALUES (
   '00000000-0000-0000-0000-000000000000',
-  uuid_generate_v4(),
+  gen_random_uuid(),
   'authenticated',
   'authenticated',
-  'work.ankit2@gmail.com',
-  crypt('Ankit923@#', gen_salt('bf')),
-  NOW(),
-  NOW(),
+  '[YOUR_ADMIN_EMAIL]',
+  crypt('[YOUR_SECURE_PASSWORD]', gen_salt('bf')),
+  now(),
+  NULL,
   '',
   NULL,
   '',
+  NULL,
   '',
   '',
   NULL,
   NULL,
   '{"provider":"email","providers":["email"]}',
   '{}',
-  FALSE,
-  NOW(),
-  NOW(),
+  NULL,
+  now(),
+  now(),
   NULL,
   NULL,
   '',
@@ -69,11 +71,11 @@ INSERT INTO auth.users (
   NULL,
   '',
   NULL,
-  FALSE,
+  false,
   NULL
 );
 
--- Create corresponding entry in auth.identities
+-- Then, let's create the identity record
 INSERT INTO auth.identities (
   provider_id,
   user_id,
@@ -81,17 +83,26 @@ INSERT INTO auth.identities (
   provider,
   last_sign_in_at,
   created_at,
-  updated_at
+  updated_at,
+  email
 ) VALUES (
-  'work.ankit2@gmail.com',
-  (SELECT id FROM auth.users WHERE email = 'work.ankit2@gmail.com'),
-  '{"sub":"' || (SELECT id FROM auth.users WHERE email = 'work.ankit2@gmail.com') || '","email":"work.ankit2@gmail.com","email_verified":true,"phone_verified":false}',
+  '[YOUR_ADMIN_EMAIL]',
+  (SELECT id FROM auth.users WHERE email = '[YOUR_ADMIN_EMAIL]'),
+  '{"sub":"' || (SELECT id FROM auth.users WHERE email = '[YOUR_ADMIN_EMAIL]') || '","email":"[YOUR_ADMIN_EMAIL]","email_verified":true,"phone_verified":false}',
   'email',
-  NOW(),
-  NOW(),
-  NOW()
+  now(),
+  now(),
+  now(),
+  '[YOUR_ADMIN_EMAIL]'
 );
 
+-- Verify the user was created
+SELECT id, email, created_at, email_confirmed_at FROM auth.users WHERE email = '[YOUR_ADMIN_EMAIL]';
+
+-- Login credentials:
+-- Email: [YOUR_ADMIN_EMAIL]
+-- Password: [YOUR_SECURE_PASSWORD]
+
 -- Note: After running this script, you should be able to login with:
--- Email: work.ankit2@gmail.com
--- Password: Ankit923@# 
+-- Email: [YOUR_ADMIN_EMAIL]
+-- Password: [YOUR_SECURE_PASSWORD] 

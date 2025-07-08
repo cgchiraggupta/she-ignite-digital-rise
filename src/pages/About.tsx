@@ -73,7 +73,7 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 text-white" style={{ background: 'linear-gradient(135deg, rgb(230, 0, 35), rgb(204, 0, 31))' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -159,7 +159,7 @@ const About = () => {
               return (
                 <Card key={index} className="text-center hover:shadow-card transition-all duration-300">
                   <CardHeader>
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                       <IconComponent className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl">{value.title}</CardTitle>
@@ -178,7 +178,7 @@ const About = () => {
               const IconComponent = achievement.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                     <IconComponent className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{achievement.title}</h3>
@@ -211,7 +211,7 @@ const About = () => {
                     {milestone.year}
                   </div>
                   {index < timeline.length - 1 && (
-                    <div className="w-0.5 h-16 bg-primary/20 flex-shrink-0" />
+                    <div className="w-0.5 h-16 flex-shrink-0" style={{ backgroundColor: 'rgba(230, 0, 35, 0.2)' }} />
                   )}
                 </div>
                 <div className="flex-1 pb-8">
@@ -270,7 +270,7 @@ const About = () => {
             ].map((region, index) => (
               <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-2xl">{region.city}</CardTitle>
@@ -301,7 +301,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-20" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-6">

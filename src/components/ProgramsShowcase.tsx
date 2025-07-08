@@ -58,7 +58,7 @@ const ProgramsShowcase = () => {
                   </div>
                 )}
                 <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
                     <IconComponent className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{program.title}</CardTitle>
@@ -127,7 +127,7 @@ const ProgramsShowcase = () => {
               alt="Digital Marketing Training"
               className="rounded-lg shadow-card"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-lg" />
+                            <div className="absolute inset-0 rounded-lg" style={{ background: 'linear-gradient(to top, rgba(230, 0, 35, 0.2), transparent)' }} />
           </div>
         </div>
       </div>
