@@ -1,12 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import heroImage from "@/assets/hero-women-entrepreneurs.jpg";
+// Using direct path to media folder image
 
 const HeroSection = () => {
   const sectionRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const headlineWords = ["Transform", "Your"];
   const highlightWords = ["Business", "Dreams"];
   const finalWords = ["Into", "Digital", "Success"];
@@ -50,19 +61,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <img
-          src={heroImage}
+          src="/media/IMG_0011.JPG"
           alt="Empowering Women Entrepreneurs"
           className="w-full h-full object-cover"
+          style={{
+            objectPosition: isMobile ? 'center 15%' : 'center center',
+            height: '100vh',
+            width: '100%',
+            maxWidth: '100vw'
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-20">
+      <div className="relative container mx-auto px-4 py-12 sm:py-16 md:py-20">
         <div className="max-w-2xl text-background">
           {/* Location Badge */}
           <motion.div 
@@ -84,22 +101,16 @@ const HeroSection = () => {
             animate="visible"
           >
             <div className="flex flex-wrap gap-x-4">
-              {headlineWords.map((word, index) => (
-                <motion.span key={index} variants={wordVariants}>
-                  {word}
-                </motion.span>
-              ))}
+              <motion.span variants={wordVariants}>Every</motion.span>
+              <motion.span variants={wordVariants}>Indian</motion.span>
             </div>
             <motion.div className="block" variants={wordVariants}>
-              <span className="text-primary mr-4">{highlightWords[0]}</span>
-              <span className="text-primary">{highlightWords[1]}</span>
+              <span className="text-primary mr-4">Woman</span>
+              <span className="text-primary">Deserves</span>
             </motion.div>
             <div className="flex flex-wrap gap-x-4">
-              {finalWords.map((word, index) => (
-                <motion.span key={index} variants={wordVariants}>
-                  {word}
-                </motion.span>
-              ))}
+              <motion.span variants={wordVariants}>Digital</motion.span>
+              <motion.span variants={wordVariants}>Success</motion.span>
             </div>
           </motion.h1>
 
@@ -110,8 +121,8 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
           >
-            Join India's most empowering community of women entrepreneurs mastering 
-            digital marketing and AI to scale their businesses beyond boundaries.
+            From your dreams to digital reality - we walk alongside ambitious Indian women entrepreneurs 
+            as they master AI, build authentic brands, and create businesses that honor both tradition and innovation.
           </motion.p>
 
           {/* CTA Buttons */}

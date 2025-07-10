@@ -15,18 +15,18 @@ const About = () => {
 
   const values = [
     {
-      title: "Authenticity",
-      description: "We believe in real strategies that work in the real world, not theoretical concepts.",
+      title: "Authenticity Over Everything",
+      description: "We honor real strategies that work for real Indian women, not borrowed concepts that don't fit our context.",
       icon: Heart
     },
     {
-      title: "Community",
-      description: "Success is sweeter when shared. We build genuine connections that last a lifetime.",
+      title: "Sisterhood as Strength",
+      description: "Success blooms when shared among sisters. We build bridges of trust and celebration that last lifetimes.",
       icon: Users
     },
     {
-      title: "Empowerment",
-      description: "Every woman has the potential to build something extraordinary. We just help unlock it.",
+      title: "Rooted Empowerment",
+      description: "Every woman carries infinite potential within her. We nurture it while honoring the cultural wisdom that grounds us.",
       icon: Target
     }
   ];
@@ -77,12 +77,12 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Empowering Women
-              <span className="block">Entrepreneurs Since 2020</span>
+              Where Every Indian Woman's
+              <span className="block">Dreams Find Their Wings</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Born from a vision to bridge the digital divide, SHELeadsIndia has become 
-              Maharashtra's most trusted platform for women entrepreneurship.
+              Born from the belief that every woman deserves a platform to rise, SHELeadsIndia has become 
+              a sanctuary where tradition meets innovation, and sisterhood powers success.
             </p>
           </div>
         </div>
@@ -94,46 +94,173 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Meet Our Founder
+                Meet Our Founder - Nikita Vora
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                "I started SHELeadsIndia because I saw too many brilliant women with incredible 
-                business ideas struggling to navigate the digital world. Having built and scaled 
-                my own business from zero to seven figures, I knew the exact roadmap that works."
+                "After 15+ years in the digital marketing world, 22 countries traveled, and 350+ women entrepreneurs mentored…
+                I still hear this one line from powerhouse women: 'I have the skills, but I don't know how to grow my brand online.' 
+                That's where I come in."
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                "Today, seeing women across Maharashtra transform their lives and build sustainable 
-                businesses is what drives me every single day. This isn't just about business—it's 
-                about creating generational change."
+                "I'm Nikita Vora—founder of SHELeadsIndia, where I help women-led businesses scale using smart digital systems, 
+                MarTech, and AI-driven content strategies. What I do differently? I don't teach you to chase likes—I teach you to 
+                build digital assets. I don't build funnels—I build credibility engines that attract clients."
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <Award className="h-5 w-5 text-primary" />
-                  <span>Featured in 15+ national publications</span>
+                  <span>Business Strategist & Independent Director | IIM-A Alum</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Users className="h-5 w-5 text-primary" />
-                  <span>Mentored 500+ women entrepreneurs</span>
+                  <span>Empowering 10,000+ Women Entrepreneurs across India</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Target className="h-5 w-5 text-primary" />
-                  <span>Built 3 successful businesses</span>
+                  <span>Featured in Times of India, Hindustan Times, Financial Express</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Award className="h-5 w-5 text-primary" />
+                  <span>Invited Trainer at IIM Ahmedabad, BNI, and leading business forums</span>
                 </div>
               </div>
+              <div className="mb-8">
+                <h4 className="font-semibold mb-4 text-primary">Signature Work Includes:</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>→ LinkedIn Systems that attract inbound leads</li>
+                  <li>→ Instagram Automation for content + community</li>
+                  <li>→ Website & Funnel Revamps (No-code + Smart design)</li>
+                  <li>→ AI-powered Content Strategy</li>
+                  <li>→ Weekly Masterclasses & Offline Events for Women Founders</li>
+                </ul>
+              </div>
               <Button variant="outline" size="lg" className="group">
-                Read Full Story
+                Connect with Nikita
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
             <div className="relative">
               <img
                 src={founderImage}
-                alt="SHELeadsIndia Founder"
+                alt="Nikita Vora - SHELeadsIndia Founder"
                 className="rounded-2xl shadow-elegant w-full max-w-md mx-auto"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm">Lives Changed</div>
+                <div className="text-2xl font-bold">10,000+</div>
+                <div className="text-sm">Women Empowered</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Overview */}
+      <section className="py-20 bg-gradient-section">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              What Makes SHELeads Special
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              SHELeads is dedicated to empowering women entrepreneurs and professionals by providing a tailored 
+              business solution for establishing and growing their businesses in the digital world.
+            </p>
+          </div>
+
+          {/* What Sets Us Apart */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-12">What Sets Us Apart?</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="text-center hover:shadow-card transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                    <Heart className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Designed Exclusively for Women</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Our platform is crafted to support women in advancing their business ventures with understanding and empathy.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-card transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Empowerment for Success</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">We help women elevate their businesses and create inspiring success stories that celebrate both achievement and values.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-card transition-all duration-300">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                    <Users className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Independent E-commerce Platform</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Unique opportunity for women entrepreneurs to manage and develop their online businesses independently with expert guidance.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Platform Offerings */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-12">Our Platform Offers</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="flex items-start gap-4 p-6 rounded-lg" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                  <Users className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Networking Opportunities</h4>
+                  <p className="text-sm text-muted-foreground">Connect with other entrepreneurs for collaboration and support</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 rounded-lg" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                  <Award className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Exclusive Digital Marketplace</h4>
+                  <p className="text-sm text-muted-foreground">A space specifically for women entrepreneurs to showcase and sell their products</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 rounded-lg" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                  <Target className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Affordable Website Development</h4>
+                  <p className="text-sm text-muted-foreground">Get your business online with a professionally developed website at a nominal charge</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 rounded-lg" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                  <Heart className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Expert Mentoring</h4>
+                  <p className="text-sm text-muted-foreground">Receive guidance from industry professionals and experienced mentors</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 rounded-lg" style={{ backgroundColor: 'rgba(230, 0, 5, 0.05)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+                  <Award className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Focused Training Modules</h4>
+                  <p className="text-sm text-muted-foreground">Enhance your skills with targeted training designed to help you succeed</p>
+                </div>
               </div>
             </div>
           </div>
@@ -145,11 +272,11 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Our Mission & Values
+              The Heart of Our Mission
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We exist to democratize entrepreneurship for women by providing world-class 
-              digital marketing education, AI tools training, and an empowering community.
+              We exist to create a world where every Indian woman's entrepreneurial spirit is nurtured, 
+              celebrated, and given the tools to flourish—digitally savvy yet culturally rooted, globally ambitious yet locally connected.
             </p>
           </div>
 

@@ -15,7 +15,7 @@ export interface Event {
   created_at: string;
   updated_at: string;
   status: 'draft' | 'published' | 'ended';
-  registration_fields: string[]; // JSON array of required fields
+  registration_fields: string[]; 
   thank_you_message: string;
 }
 
@@ -93,7 +93,7 @@ export async function deleteEvent(id: string): Promise<void> {
   if (error) throw error;
 }
 
-// Registration CRUD operations
+
 export async function fetchRegistrations(eventId?: string): Promise<Registration[]> {
   let query = supabase
     .from('registrations')
@@ -252,7 +252,7 @@ export async function createRegistration(registration: Omit<Registration, 'id' |
       
       if (oldSchemaError) throw oldSchemaError;
       
-      // Transform back to expected format
+      
       return {
         ...data,
         registration_data: {

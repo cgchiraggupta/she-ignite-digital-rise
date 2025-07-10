@@ -8,42 +8,42 @@ import { Download, TrendingUp, Award, Users, BookOpen, Video, FileText, ArrowRig
 const Resources = () => {
   const leadMagnets = [
     {
-      title: "5-Day Business Growth Planner",
-      description: "Transform your business with daily action plans designed by successful women entrepreneurs.",
-      type: "PDF Workbook",
+      title: "Sacred 5-Day Business Growth Journey",
+      description: "Transform your business with intention through daily wisdom practices designed by successful Indian women entrepreneurs.",
+      type: "Digital Workbook",
       downloads: "2,500+",
       icon: TrendingUp,
       features: [
-        "Daily growth challenges",
-        "Revenue tracking templates",
-        "Goal-setting frameworks",
-        "Success metrics dashboard"
+        "Daily intention-setting practices",
+        "Heart-centered revenue planning",
+        "Values-aligned goal frameworks",
+        "Celebration & gratitude rituals"
       ]
     },
     {
-      title: "Brand Confidence Quiz",
-      description: "Discover your unique brand personality and get personalized recommendations for your business.",
-      type: "Interactive Quiz",
+      title: "Discover Your Authentic Brand Voice",
+      description: "Uncover your unique brand essence and receive personalized guidance for expressing your truth in business.",
+      type: "Interactive Discovery",
       downloads: "1,800+",
       icon: Award,
       features: [
-        "Personalized brand analysis",
-        "Custom action plan",
-        "Brand voice guidelines",
-        "Visual identity tips"
+        "Deep brand essence analysis",
+        "Custom authenticity action plan",
+        "Cultural wisdom integration guide",
+        "Visual identity soul mapping"
       ]
     },
     {
-      title: "Pre-Launch Success Checklist",
-      description: "Everything you need to successfully launch your product or service without missing critical steps.",
-      type: "Checklist + Templates",
+      title: "Mindful Launch Success Blueprint",
+      description: "Everything you need to launch your venture with grace, ensuring no critical step is missed in your sacred business birth.",
+      type: "Comprehensive Guide",
       downloads: "3,200+",
       icon: Users,
       features: [
-        "60-point launch checklist",
-        "Marketing timeline templates",
-        "Launch day action plan",
-        "Post-launch optimization guide"
+        "60-point mindful launch checklist",
+        "Heart-centered marketing timeline",
+        "Launch day blessing rituals",
+        "Post-launch growth with gratitude guide"
       ]
     }
   ];
@@ -78,12 +78,12 @@ const Resources = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Free Resources That
-              <span className="block">Accelerate Success</span>
+              Sacred Tools for Your
+              <span className="block">Entrepreneurial Journey</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Access our library of proven business tools, templates, and guides. 
-              Start building your empire today—completely free.
+              Access our treasured collection of business wisdom, templates, and guides—each one 
+              created with love to honor your dreams and accelerate your success.
             </p>
           </div>
         </div>
@@ -94,10 +94,10 @@ const Resources = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Most Downloaded Resources
+              Most Cherished Resources
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              These tools have helped thousands of women entrepreneurs build successful businesses.
+              These sacred tools have guided thousands of Indian women entrepreneurs toward businesses that honor both success and soul.
             </p>
           </div>
 
@@ -158,10 +158,10 @@ const Resources = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Explore All Resources
+              Explore Our Wisdom Library
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Browse our complete library organized by category to find exactly what you need.
+              Browse our complete collection of heart-centered resources, each one crafted to support your unique entrepreneurial path.
             </p>
           </div>
 

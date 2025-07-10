@@ -99,13 +99,73 @@ const Podcast = () => {
       date: "Dec 13, 2024",
       tags: ["Legal", "RERA", "Professional Growth"],
       category: "Professional Excellence"
+    },
+    {
+      id: 5,
+      title: "In conversation with SHELeadsIndia Member - Pallavi Godbole - HR Consultant",
+      description: "An inspiring conversation with Pallavi Godbole, HR Consultant and SHELeadsIndia member, sharing her professional journey and insights.",
+      embedUrl: "https://www.youtube.com/embed/4-WmPejONCo",
+      featured: false,
+      duration: "16:30",
+      views: "650",
+      date: "Dec 8, 2024",
+      tags: ["HR", "Consulting", "Professional Growth"],
+      category: "Professional Excellence"
+    },
+    {
+      id: 6,
+      title: "The story of Eclassopedia: online learning Platform by Savita garg | SHELeads India",
+      description: "Discover the journey of creating Eclassopedia, an innovative online learning platform, with founder Savita Garg.",
+      embedUrl: "https://www.youtube.com/embed/-RSTaEH8irU",
+      featured: false,
+      duration: "19:45",
+      views: "1.1K",
+      date: "Dec 5, 2024",
+      tags: ["EdTech", "Online Learning", "Platform"],
+      category: "Tech Innovation"
+    },
+    {
+      id: 7,
+      title: "homemade goods baked with love | SHELeads India",
+      description: "Meet a passionate entrepreneur who turned her love for baking into a thriving homemade goods business.",
+      embedUrl: "https://www.youtube.com/embed/3vXcX4WPRsE",
+      featured: false,
+      duration: "14:20",
+      views: "780",
+      date: "Dec 3, 2024",
+      tags: ["Food Business", "Homemade", "Baking"],
+      category: "Food & Lifestyle"
+    },
+    {
+      id: 8,
+      title: "Scale your buisness | SHELeads India",
+      description: "Learn effective strategies and proven methods to scale your business and achieve sustainable growth.",
+      embedUrl: "https://www.youtube.com/embed/flImN-c8_pQ",
+      featured: false,
+      duration: "17:30",
+      views: "1.2K",
+      date: "Dec 1, 2024",
+      tags: ["Business Scaling", "Growth", "Strategy"],
+      category: "Business Growth"
+    },
+    {
+      id: 9,
+      title: "How Women Can Lead with Voice, Vision & Visibility | Leadership Podcast India",
+      description: "Discover how women can step into leadership roles with confidence, vision, and visibility in today's business world.",
+      embedUrl: "https://www.youtube.com/embed/kQUNxGxMWmA",
+      featured: false,
+      duration: "21:45",
+      views: "950",
+      date: "Nov 28, 2024",
+      tags: ["Leadership", "Women Empowerment", "Vision"],
+      category: "Leadership"
     }
   ];
 
   const stats = [
-    { icon: Play, label: "Total Episodes", value: "4", color: "text-blue-600" },
-    { icon: Eye, label: "Total Views", value: "8.4K", color: "text-green-600" },
-    { icon: Heart, label: "Subscribers", value: "1.2K", color: "text-red-600" },
+    { icon: Play, label: "Total Episodes", value: "9", color: "text-blue-600" },
+    { icon: Eye, label: "Total Views", value: "6,023", color: "text-green-600" },
+    { icon: Heart, label: "Subscribers", value: "109", color: "text-red-600" },
     { icon: TrendingUp, label: "Growth Rate", value: "+150%", color: "text-purple-600" }
   ];
 
@@ -143,25 +203,25 @@ const Podcast = () => {
             </motion.div>
             
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Talks That
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                Glow
+              Stories of Courage,
+              <span className="block bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent">
+                Voices of Transformation
               </span>
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8"
+              className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Dive into inspiring conversations with successful women entrepreneurs. 
-              Real stories, real struggles, and real victories that will ignite your entrepreneurial spirit.
+              Listen to the heartfelt journeys of Indian women entrepreneurs who dared to dream, 
+              faced their fears, and created businesses that honor both their values and their vision.
             </motion.p>
 
             {/* Stats Cards */}
@@ -333,7 +393,7 @@ const Podcast = () => {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
             variants={containerVariants}
           >
             {episodes.map((episode) => (
@@ -376,17 +436,17 @@ const Podcast = () => {
                     )}
                   </div>
                   
-                  <CardContent className="p-6 space-y-4">
-                    <div className="space-y-3">
+                  <CardContent className="p-4 space-y-3">
+                    <div className="space-y-2">
                       <Badge variant="outline" className="text-xs font-medium">
                         {episode.category}
                       </Badge>
                       
-                      <h3 className="text-xl font-bold leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                      <h3 className="text-lg font-bold leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                         {episode.title}
                       </h3>
                       
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                      <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">
                         {episode.description}
                       </p>
                     </div>

@@ -9,71 +9,71 @@ const Programs = () => {
   const programs = [
     {
       id: 1,
-      title: "1:1 Elite Mentorship",
-      subtitle: "Transform Your Business in 90 Days",
+      title: "Sacred Sisterhood Mentorship",
+      subtitle: "Heart-Centered Transformation in 90 Days",
       price: "₹25,000",
       duration: "3 months",
-      badge: "Most Popular",
+      badge: "Most Cherished",
       icon: Users,
-      description: "Get personalized guidance from successful women entrepreneurs who've scaled from zero to six figures.",
+      description: "Walk alongside women who've transformed not just their businesses, but their entire relationship with success—learning courage, strategy, and the art of authentic leadership.",
       features: [
-        "Weekly 1-on-1 strategy sessions",
-        "Personal brand development roadmap",
-        "Business scaling action plan",
-        "Direct access to mentor WhatsApp",
-        "Exclusive mastermind group access",
-        "30-day money-back guarantee"
+        "Weekly heart-to-heart strategy sessions",
+        "Authentic personal brand development",
+        "Values-driven business scaling blueprint",
+        "Sister-to-sister WhatsApp connection",
+        "Exclusive sisterhood circle access",
+        "Sacred 30-day transformation guarantee"
       ],
       highlights: [
-        "Average 300% revenue increase",
-        "Lifetime community access",
-        "Certificate of completion"
+        "Deep personal & business transformation",
+        "Lifetime sisterhood community",
+        "Cultural wisdom integration"
       ]
     },
     {
       id: 2,
-      title: "Digital Marketing & AI Mastery",
-      subtitle: "Future-Proof Your Business Skills",
+      title: "Digital Mastery with Indian Wisdom",
+      subtitle: "Technology That Honors Your Values",
       price: "₹15,000",
       duration: "6 weeks",
-      badge: "Best Value",
+      badge: "Most Practical",
       icon: Brain,
-      description: "Master cutting-edge AI tools and digital marketing strategies that will give you an unfair advantage.",
+      description: "Master cutting-edge AI and digital tools while staying rooted in authenticity. Technology that amplifies your voice, not changes it.",
       features: [
-        "AI-powered marketing automation",
-        "Social media content systems",
-        "Email marketing mastery",
-        "SEO and online visibility",
-        "Analytics and ROI tracking",
-        "Live weekly group coaching"
+        "AI tools designed for Indian markets",
+        "Culturally-aware content creation",
+        "Regional language optimization",
+        "Values-based marketing strategies",
+        "Community-centered growth tactics",
+        "Weekly wisdom-sharing circles"
       ],
       highlights: [
-        "50+ AI tools training",
-        "Ready-to-use templates",
-        "Industry certifications"
+        "50+ India-focused digital tools",
+        "Culture-conscious templates",
+        "Authenticity-first certifications"
       ]
     },
     {
       id: 3,
-      title: "Community & Networking Hub",
-      subtitle: "Connect, Collaborate, Conquer",
+      title: "The Sisterhood Circle",
+      subtitle: "Where Dreams Meet Community",
       price: "₹5,000",
       duration: "12 months",
-      badge: "Community Favorite",
+      badge: "Heart of Community",
       icon: Rocket,
-      description: "Join an exclusive network of ambitious women entrepreneurs and access premium networking opportunities.",
+      description: "Find your tribe of like-minded women who understand your journey, celebrate your wins, and support you through every challenge with unwavering sisterhood.",
       features: [
-        "Monthly regional meetups",
-        "Virtual mastermind sessions",
-        "Industry expert guest speakers",
-        "Business collaboration opportunities",
-        "Success celebration events",
-        "24/7 community support"
+        "Monthly regional sister gatherings",
+        "Virtual wisdom-sharing sessions",
+        "Cultural celebration meetups",
+        "Collaborative growth opportunities",
+        "Success ritual celebrations",
+        "24/7 sister support network"
       ],
       highlights: [
-        "500+ active members",
-        "Regional chapters",
-        "Lifetime access"
+        "500+ sisters across Maharashtra",
+        "Cultural festival celebrations",
+        "Lifetime belonging and connection"
       ]
     }
   ];
@@ -87,12 +87,12 @@ const Programs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Programs That Transform
-              <span className="block">Lives & Businesses</span>
+              Journeys Designed for
+              <span className="block">The Indian Woman's Heart</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Choose your path to entrepreneurial success. Every program is designed 
-              to deliver measurable results and lasting transformation.
+              Every program is crafted with deep understanding of your unique journey—balancing ambition with 
+              tradition, innovation with values, and personal growth with community connection.
             </p>
           </div>
         </div>
@@ -181,15 +181,15 @@ const Programs = () => {
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-                          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
               <Award className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Your Success is Guaranteed
+              Your Success Is Sacred to Us
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We're so confident in our programs that we offer a 30-day money-back guarantee. 
-              If you don't see measurable progress in your business, we'll refund every penny.
+              We believe so deeply in your potential and our programs that we offer a heartfelt 30-day guarantee. 
+              If you don't feel the transformation beginning in your business and your confidence, we'll honor our commitment with a complete refund.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">

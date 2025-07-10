@@ -15,7 +15,7 @@ export default function SupabaseTest() {
     setLoading(true);
     setResults([]);
     
-    // Test 1: Basic connection
+    
     try {
       addResult("✅ Testing Supabase connection...");
       const { data, error } = await supabase.from('posts').select('count', { count: 'exact', head: true });
@@ -28,7 +28,7 @@ export default function SupabaseTest() {
       addResult(`❌ Connection error: ${err.message}`);
     }
 
-    // Test 2: Auth configuration
+   
     try {
       addResult("✅ Testing auth configuration...");
       const { data: { session } } = await supabase.auth.getSession();

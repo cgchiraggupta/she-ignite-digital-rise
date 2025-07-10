@@ -1,7 +1,4 @@
--- Create sample blog posts to populate the blog section
--- Run this in your Supabase SQL Editor
 
--- Insert sample blog posts
 INSERT INTO public.posts (
     title,
     excerpt,

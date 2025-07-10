@@ -68,7 +68,7 @@ const Navigation = () => {
               transition={{ duration: 0.2 }}
             >
               <Button variant="hero" size="sm">
-                Get Started
+                Begin Your Journey
               </Button>
             </motion.div>
           </div>
@@ -106,7 +106,7 @@ const Navigation = () => {
               ))}
               <div className="px-3 py-2">
                 <Button variant="hero" size="sm" className="w-full">
-                  Get Started
+                  Begin Your Journey
                 </Button>
               </div>
             </div>

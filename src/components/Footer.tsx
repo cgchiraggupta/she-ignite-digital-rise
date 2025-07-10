@@ -133,7 +133,7 @@ const Footer = () => {
               </Button>
             </div>
             <p className="text-gray-300 text-xs leading-relaxed">
-              The passion behind SHELeads is immense...to work together as a team to empower and uplift women entrepreneurs.
+              The sacred mission of SHELeads is to nurture and celebrate the dreams of Indian women entrepreneurs, creating a sisterhood where tradition meets innovation and success honors our roots.
             </p>
           </div>
         </div>
@@ -143,7 +143,13 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="text-center text-xs text-gray-300">
             © Copyright Sheleads 2024 All rights reserved. Professional Website Developed & Digital Marketing by{" "}
-            <span style={{ color: '#E60023' }}>Dexcel Digital Hub Pvt Ltd.</span>
+            <a href="mailto:work.ankit2@gmail.com" style={{ color: '#E60023' }} className="hover:underline">
+              work.ankit2@gmail.com
+            </a>
+            {" & "}
+            <a href="mailto:cg077593@gmail.com" style={{ color: '#E60023' }} className="hover:underline">
+              cg077593@gmail.com
+            </a>
           </div>
         </div>
       </div>

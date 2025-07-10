@@ -12,76 +12,76 @@ const SuccessStories = () => {
       name: "Priya Sharma",
       business: "Eco-Friendly Home Products",
       city: "Pune",
-      results: "From ₹0 to ₹50L revenue in 8 months",
+      results: "From dreams to ₹50L revenue in 8 months",
       image: "/api/placeholder/120/120",
-      story: "I was a stay-at-home mom with a dream to create eco-friendly products. SHELeadsIndia didn't just teach me digital marketing—they gave me the confidence to believe I could build a real business. The AI tools they introduced saved me 20 hours per week, and the community support was incredible. Today, my products are sold across Maharashtra!",
+      story: "As a mother who believed in sustainable living, I dreamed of creating products that would make a difference. SHELeadsIndia didn't just teach me digital marketing—they helped me find my voice as an Indian woman entrepreneur. The AI tools became my trusted assistants, and the sisterhood gave me courage I never knew I had. Today, families across Maharashtra choose my products for healthier homes!",
       metrics: {
-        revenue: "500% increase",
-        customers: "2,500+ happy customers",
-        team: "Hired 5 team members"
+        revenue: "500% growth with purpose",
+        customers: "2,500+ families served",
+        team: "5 women empowered with employment"
       }
     },
     {
       name: "Anita Desai",
       business: "Tech Solutions for SMEs",
       city: "Nagpur",
-      results: "Scaled to 6-figure business in 6 months",
+      results: "Scaled to 6-figure business with authenticity",
       image: "/api/placeholder/120/120",
-      story: "As a software engineer turned entrepreneur, I had the technical skills but no idea how to market my services. The mentorship program connected me with someone who had walked the same path. The business strategies and networking opportunities helped me find my first major clients and build recurring revenue streams.",
+      story: "As a software engineer turned entrepreneur, I had the technical knowledge but lacked the confidence to put myself out there. The mentorship program connected me with a sister who understood my journey intimately. Through authentic relationship-building and values-driven strategies, I found my first major clients and created recurring revenue streams that honor both innovation and tradition.",
       metrics: {
-        revenue: "₹12L annual revenue",
-        clients: "25+ enterprise clients",
-        team: "Founded with co-founder from SHE community"
+        revenue: "₹12L annual revenue with integrity",
+        clients: "25+ businesses transformed",
+        partnership: "Found my business sister through SHE community"
       }
     },
     {
       name: "Meera Patel",
       business: "Sustainable Fashion Brand",
       city: "Nashik",
-      results: "Built 50K Instagram following organically",
+      results: "Built 50K authentic community organically",
       image: "/api/placeholder/120/120",
-      story: "My fashion brand was stuck at 500 followers for months. The digital marketing course taught me content strategies that actually work. I learned to use AI for content creation, built authentic engagement, and turned my Instagram into a sales machine. Now I have customers from across India placing orders daily!",
+      story: "My fashion brand represented my heritage and values, but I struggled to share this story effectively. The digital mastery program taught me content strategies rooted in authenticity rather than tactics. I learned to use AI as a tool for creativity, not replacement, and built genuine connections with women who share my values. Now customers across India celebrate sustainable fashion through my brand!",
       metrics: {
-        followers: "50K+ Instagram followers",
-        engagement: "8.5% engagement rate",
-        sales: "200+ orders per month"
+        followers: "50K+ community members",
+        engagement: "8.5% authentic engagement",
+        sales: "200+ monthly orders with love"
       }
     }
   ];
 
   const quickTestimonials = [
     {
-      quote: "The ROI tracking methods alone paid for the entire course within the first month.",
+      quote: "The wisdom shared here doesn't just improve your business metrics—it transforms how you see yourself as a leader.",
       author: "Rajani Kulkarni",
       title: "Digital Marketing Agency Owner",
       city: "Pune"
     },
     {
-      quote: "I found my business co-founder at a SHE networking event. We've now launched two successful ventures together.",
+      quote: "I found not just a business partner, but a sister who shares my vision. Together we're creating solutions our community needs.",
       author: "Kavitha Rao",
       title: "Tech Startup Co-founder",
       city: "Nagpur"
     },
     {
-      quote: "The personal branding workshop transformed how I present myself online. My client inquiries tripled!",
+      quote: "The personal branding guidance helped me present my authentic self confidently. My ideal clients started finding me naturally.",
       author: "Sunita Joshi",
       title: "Business Consultant",
       city: "Nashik"
     },
     {
-      quote: "From struggling freelancer to agency owner in 18 months. The mentorship program changed everything.",
+      quote: "From feeling lost as a freelancer to leading an agency with purpose. The mentorship program honored who I am while nurturing who I'm becoming.",
       author: "Pooja Mehta",
       title: "Digital Agency Founder",
       city: "Pune"
     },
     {
-      quote: "The AI automation tools they taught me now handle 80% of my marketing. I finally have my life back!",
+      quote: "The AI automation tools respect my time and family priorities. Technology serves my life's balance, not the other way around.",
       author: "Deepika Singh",
       title: "E-commerce Store Owner",
       city: "Nagpur"
     },
     {
-      quote: "The community connections are invaluable. These women celebrate your wins and support you through challenges.",
+      quote: "This sisterhood celebrates your uniqueness and supports your journey without judgment. It's sacred space for growth.",
       author: "Neha Agarwal",
       title: "Health & Wellness Coach",
       city: "Nashik"
@@ -103,12 +103,12 @@ const SuccessStories = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Real Women,
-              <span className="block">Real Transformations</span>
+              Courage Creates Change,
+              <span className="block">Dreams Become Reality</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              These aren't just success stories—they're proof that with the right guidance 
-              and community, any woman can build the business of her dreams.
+              These are not just business victories—they are stories of Indian women who chose to believe 
+              in themselves, honoring their roots while reaching for their dreams.
             </p>
           </div>
         </div>
@@ -141,10 +141,10 @@ const SuccessStories = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Transformation Stories
+              Journeys of Heart and Success
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Meet the women who dared to dream big and built businesses that matter.
+              Meet the women who honored their dreams with courage and built businesses that celebrate both purpose and prosperity.
             </p>
           </div>
 

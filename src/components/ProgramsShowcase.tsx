@@ -7,26 +7,26 @@ const ProgramsShowcase = () => {
   const programs = [
     {
       icon: Users,
-      title: "1:1 Mentorship Program",
-      description: "Personalized guidance from successful women entrepreneurs who've scaled from zero to six figures.",
-      features: ["Weekly strategy sessions", "Personal brand development", "Business scaling roadmap", "Exclusive network access"],
-      cta: "Apply for Mentorship",
-      highlight: "Most Popular"
+      title: "Sister-to-Sister Mentorship",
+      description: "Walk alongside women who've transformed their lives and businesses, learning not just strategies but the courage to dream bigger.",
+      features: ["Heart-to-heart strategy sessions", "Authentic brand story development", "Values-driven growth roadmap", "Sisterhood network access"],
+      cta: "Begin Your Journey",
+      highlight: "Most Cherished"
     },
     {
       icon: Brain,
-      title: "Digital Marketing & AI Mastery",
-      description: "Master the tools and strategies that will future-proof your business in the digital age.",
-      features: ["AI-powered marketing tools", "Social media automation", "Content creation systems", "ROI tracking methods"],
-      cta: "Start Learning",
+      title: "Digital Mastery with Cultural Wisdom",
+      description: "Master cutting-edge tools while staying rooted in your values. Technology that serves your vision, not the other way around.",
+      features: ["AI tools for Indian markets", "Culturally-aware content strategies", "Regional language optimization", "Community-focused marketing"],
+      cta: "Embrace Innovation",
       highlight: ""
     },
     {
       icon: Rocket,
-      title: "Community & Events",
-      description: "Connect with like-minded women entrepreneurs and access exclusive networking opportunities.",
-      features: ["Monthly regional meetups", "Virtual mastermind groups", "Industry expert sessions", "Success celebration events"],
-      cta: "Join Community",
+      title: "The Sisterhood Circle",
+      description: "Find your tribe of ambitious, like-minded women who understand your journey and celebrate your unique path to success.",
+      features: ["Regional sister circles", "Cultural celebration meetups", "Wisdom-sharing sessions", "Success celebration rituals"],
+      cta: "Find Your Tribe",
       highlight: ""
     }
   ];
@@ -37,12 +37,12 @@ const ProgramsShowcase = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Programs That Transform
-            <span className="block text-primary">Lives & Businesses</span>
+            Programs Designed for
+            <span className="block text-primary">The Indian Woman's Journey</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Choose your path to entrepreneurial success. Each program is designed to meet you 
-            where you are and take you where you want to be.
+            Every program honors who you are while nurturing who you're becoming. 
+            Choose the path that resonates with your heart and aligns with your dreams.
           </p>
         </div>
 
@@ -92,32 +92,32 @@ const ProgramsShowcase = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Why Digital Skills Are Your
-              <span className="block text-primary">Competitive Advantage</span>
+              Why Digital Wisdom Is Your
+              <span className="block text-primary">Sacred Advantage</span>
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
-              In today's economy, digital literacy isn't optional—it's essential. Our programs 
-              combine cutting-edge AI tools with proven marketing strategies to give you the 
-              unfair advantage you need to dominate your market.
+              In our rapidly evolving world, digital fluency isn't just practical—it's empowering. 
+              Our programs blend ancient wisdom with modern tools, giving you the confidence to lead 
+              authentically in the digital space while staying true to your roots.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-primary-foreground text-xs font-bold">✓</span>
                 </div>
-                <span>Reduce marketing costs by 60% with AI automation</span>
+                <span>Honor your budget while maximizing impact with smart automation</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-primary-foreground text-xs font-bold">✓</span>
                 </div>
-                <span>Scale your reach 10x without hiring more staff</span>
+                <span>Reach hearts across India without compromising your authenticity</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-primary-foreground text-xs font-bold">✓</span>
                 </div>
-                <span>Build systems that work 24/7 while you sleep</span>
+                <span>Build sustainable systems that respect your life's priorities</span>
               </div>
             </div>
           </div>

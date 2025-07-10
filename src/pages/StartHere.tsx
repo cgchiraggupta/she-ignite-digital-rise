@@ -14,18 +14,18 @@ const StartHere = () => {
   const steps = [
     {
       number: "01",
-      title: "Choose Your Path",
-      description: "Select your city and get personalized resources for your region."
+      title: "Discover Your Tribe",
+      description: "Connect with your regional sister circle and access resources crafted specifically for your community."
     },
     {
       number: "02", 
-      title: "Download Free Resources",
-      description: "Get instant access to our proven business growth tools."
+      title: "Embrace Your Tools",
+      description: "Download proven resources that honor your values while accelerating your business dreams."
     },
     {
       number: "03",
-      title: "Join the Community",
-      description: "Connect with like-minded women entrepreneurs in your area."
+      title: "Begin Your Transformation",
+      description: "Step into a supportive sisterhood where your success is celebrated and your journey is honored."
     }
   ];
 
@@ -38,12 +38,12 @@ const StartHere = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Your Journey to Success
-              <span className="block">Starts Right Here</span>
+              Your Beautiful Journey
+              <span className="block">Begins Right Here</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Get personalized resources, connect with your local community, 
-              and transform your business dreams into reality.
+              Every great transformation starts with a single, brave step. Find your community, 
+              embrace resources created just for you, and begin writing your success story.
             </p>
           </div>
         </div>
@@ -54,10 +54,10 @@ const StartHere = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Choose Your City
+              Find Your Sister Circle
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Get location-specific resources and connect with entrepreneurs in your area.
+              Connect with the incredible women in your city who share your dreams and understand your journey.
             </p>
           </div>
 
@@ -94,10 +94,10 @@ const StartHere = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Your Success Path
+              Your Sacred Path to Success
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Follow these simple steps to begin your entrepreneurial transformation.
+              Follow these gentle yet powerful steps to begin your entrepreneurial transformation with grace and intention.
             </p>
           </div>
 
@@ -125,21 +125,21 @@ const StartHere = () => {
         <div className="container mx-auto px-4">
                       <div className="rounded-2xl p-8 md:p-12 text-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.05)' }}>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Ready to Get Started?
+              Ready to Honor Your Dreams?
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Download our complete business starter kit and join thousands of 
-              successful women entrepreneurs.
+              Download your complete business transformation kit and join thousands of 
+              inspiring Indian women who chose courage over comfort.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" className="group">
                 <Download className="h-5 w-5 mr-2" />
-                Download Free Kit
+                Claim Your Free Resources
                 <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button variant="outline" size="xl">
                 <Users className="h-5 w-5 mr-2" />
-                Join Community
+                Join Your Sister Circle
               </Button>
             </div>
           </div>
