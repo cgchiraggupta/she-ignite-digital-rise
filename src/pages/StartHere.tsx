@@ -1,93 +1,97 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Download, MapPin, Users, CheckCircle, MessageCircle, Star, Clock, TrendingUp } from "lucide-react";
+"use client"
+
+import Navigation from "@/components/Navigation"
+import Footer from "@/components/Footer"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { ArrowRight, Download, MapPin, Users, CheckCircle, MessageCircle, Star, Clock, TrendingUp } from "lucide-react"
 
 const StartHere = () => {
   const cities = [
-    { 
-      name: "Pune", 
-      description: "Tech Hub Programs", 
+    {
+      name: "Pune",
+      description: "Tech Hub Programs",
       programs: 3,
       whatsappLink: "https://digitalstepup.kit.com/d00ef39749",
       buttonText: "Join Pune Group",
-      backgroundImage: "/media/DSC02132.JPG"
+      backgroundImage: "/media/DSC02132.JPG",
     },
-    { 
-      name: "Nagpur", 
-      description: "Business Growth Focus", 
+    {
+      name: "Nagpur",
+      description: "Business Growth Focus",
       programs: 2,
       whatsappLink: "#",
       buttonText: "Coming Soon",
-      backgroundImage: "/media/DSC02211.JPG"
+      backgroundImage: "/media/DSC02211.JPG",
     },
-    { 
-      name: "Nashik", 
-      description: "Startup Accelerator", 
+    {
+      name: "Nashik",
+      description: "Startup Accelerator",
       programs: 2,
       whatsappLink: "https://rebrand.ly/SHELeadsNashik",
       buttonText: "Join Nashik Group",
-      backgroundImage: "/media/DSC02233.JPG"
+      backgroundImage: "/media/DSC02233.JPG",
     },
-  ];
+  ]
 
   const steps = [
     {
       number: "01",
       title: "Discover Your Tribe",
-      description: "Connect with your regional sister circle and access resources crafted specifically for your community.",
-      image: "/media/networking.JPG"
+      description:
+        "Connect with your regional sister circle and access resources crafted specifically for your community.",
+      image: "/media/networking.JPG",
     },
     {
-      number: "02", 
+      number: "02",
       title: "Embrace Your Tools",
       description: "Download proven resources that honor your values while accelerating your business dreams.",
-      image: "/media/IMG-20231220-WA0023.jpg"
+      image: "/media/IMG-20231220-WA0023.jpg",
     },
     {
       number: "03",
       title: "Begin Your Transformation",
       description: "Step into a supportive sisterhood where your success is celebrated and your journey is honored.",
-      image: "/media/Mentoring.JPG"
-    }
-  ];
+      image: "/media/Mentoring.JPG",
+    },
+  ]
 
   const whatsappBenefits = [
     {
       icon: <Users className="h-6 w-6" />,
       title: "Daily Engagement & Learning",
-      description: "Participate in interactive discussions before 4 PM"
+      description: "Participate in interactive discussions before 4 PM",
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
       title: "Post Your Promotions",
-      description: "Share your business offers, services, or products after 4 PM"
+      description: "Share your business offers, services, or products after 4 PM",
     },
     {
       icon: <Star className="h-6 w-6" />,
       title: "Marketing Tips & Hacks",
-      description: "Gain valuable insights into digital marketing"
+      description: "Gain valuable insights into digital marketing",
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Weekly FREE Training & Networking Events",
-      description: "Build skills and connections"
-    }
-  ];
+      description: "Build skills and connections",
+    },
+  ]
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section with Background Image */}
-      <section 
+      <section
         className="py-20 text-white relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(230, 0, 35, 0.8), rgba(204, 0, 31, 0.8)), url('/assets/hero-women-entrepreneurs.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundImage: `linear-gradient(rgba(255, 4, 42, 0.27), rgba(255, 0, 38, 0.17)), url('https://i.ibb.co/pjkp6PCQ/DSC02066.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          height:600
         }}
       >
         <div className="container mx-auto px-4 relative z-10">
@@ -97,12 +101,12 @@ const StartHere = () => {
               <span className="block">Begins Right Here</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md">
-              Every great transformation starts with a single, brave step. Find your community, 
-              embrace resources created just for you, and begin writing your success story.
+              Every great transformation starts with a single, brave step. Find your community, embrace resources
+              created just for you, and begin writing your success story.
             </p>
           </div>
         </div>
-        
+
         {/* Floating elements for visual appeal */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
@@ -122,38 +126,38 @@ const StartHere = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {cities.map((city, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:rotate-1"
                 style={{
                   backgroundImage: `url('${city.backgroundImage}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
                 {/* Transparent overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-primary/80 group-hover:via-primary/30 transition-all duration-500"></div>
-                
+
                 {/* Content */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
                   <div className="transform transition-all duration-300 group-hover:translate-y-[-10px]">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all duration-300">
                       <MapPin className="h-6 w-6" />
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">{city.name}</h3>
                     <p className="text-white/90 mb-3 drop-shadow-md">{city.description}</p>
-                    
+
                     <div className="mb-4">
                       <span className="text-2xl font-bold">{city.programs}</span>
                       <span className="text-white/80 ml-2">Active Programs</span>
                     </div>
-                    
+
                     {city.whatsappLink !== "#" ? (
-                      <Button 
-                        variant="secondary" 
+                      <Button
+                        variant="secondary"
                         className="w-full group/btn bg-white/90 text-gray-900 hover:bg-white backdrop-blur-sm"
-                        onClick={() => window.open(city.whatsappLink, '_blank')}
+                        onClick={() => window.open(city.whatsappLink, "_blank")}
                       >
                         <MessageCircle className="h-4 w-4 mr-2" />
                         {city.buttonText}
@@ -173,13 +177,13 @@ const StartHere = () => {
       </section>
 
       {/* WhatsApp Group Benefits */}
-      <section 
+      <section
         className="py-20 relative"
         style={{
           backgroundImage: `linear-gradient(rgba(230, 0, 35, 0.05), rgba(230, 0, 35, 0.1)), url('/media/she-leads-hero-section.JPG')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
@@ -193,13 +197,17 @@ const StartHere = () => {
               Why Join Our WhatsApp Group?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Be part of an exclusive community of ambitious women entrepreneurs who support each other's growth and success.
+              Be part of an exclusive community of ambitious women entrepreneurs who support each other's growth and
+              success.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {whatsappBenefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 bg-white/90 backdrop-blur-md hover:bg-white/95 transform hover:scale-105">
+              <Card
+                key={index}
+                className="text-center hover:shadow-xl transition-all duration-300 border-0 bg-white/90 backdrop-blur-md hover:bg-white/95 transform hover:scale-105"
+              >
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-pink-600/20 text-primary rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:scale-110">
                     {benefit.icon}
@@ -208,9 +216,7 @@ const StartHere = () => {
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
                     <h3 className="font-semibold text-lg">{benefit.title}</h3>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -218,21 +224,21 @@ const StartHere = () => {
 
           <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
-              <Button 
-                variant="hero" 
-                size="xl" 
+              <Button
+                variant="hero"
+                size="xl"
                 className="group shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => window.open('https://rebrand.ly/SHELeadsNashik', '_blank')}
+                onClick={() => window.open("https://rebrand.ly/SHELeadsNashik", "_blank")}
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
                 Join Nashik Group
                 <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="xl" 
+              <Button
+                variant="outline"
+                size="xl"
                 className="group bg-white/90 backdrop-blur-sm hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => window.open('https://digitalstepup.kit.com/d00ef39749', '_blank')}
+                onClick={() => window.open("https://digitalstepup.kit.com/d00ef39749", "_blank")}
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
                 Join Pune Group
@@ -251,7 +257,8 @@ const StartHere = () => {
               Your Sacred Path to Success
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Follow these gentle yet powerful steps to begin your entrepreneurial transformation with grace and intention.
+              Follow these gentle yet powerful steps to begin your entrepreneurial transformation with grace and
+              intention.
             </p>
           </div>
 
@@ -263,7 +270,7 @@ const StartHere = () => {
                 )}
                 <div className="relative z-10 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   {/* Step Image */}
-                  <div 
+                  <div
                     className="w-full h-48 rounded-xl mb-6 bg-cover bg-center relative overflow-hidden"
                     style={{ backgroundImage: `url('${step.image}')` }}
                   >
@@ -274,7 +281,7 @@ const StartHere = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">{step.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
@@ -285,12 +292,12 @@ const StartHere = () => {
       </section>
 
       {/* Free Resources CTA */}
-      <section 
+      <section
         className="py-20 relative"
         style={{
           backgroundImage: `linear-gradient(rgba(230, 0, 35, 0.9), rgba(204, 0, 31, 0.9)), url('/assets/founder-portrait.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="container mx-auto px-4 relative z-10">
@@ -299,8 +306,8 @@ const StartHere = () => {
               Ready to Honor Your Dreams?
             </h3>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-md">
-              Download your complete business transformation kit and join thousands of 
-              inspiring Indian women who chose courage over comfort.
+              Download your complete business transformation kit and join thousands of inspiring Indian women who chose
+              courage over comfort.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="secondary" size="xl" className="group bg-white text-primary hover:bg-white/90 shadow-lg">
@@ -308,7 +315,11 @@ const StartHere = () => {
                 Claim Your Free Resources
                 <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary bg-white/10 backdrop-blur-sm">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-primary bg-white/10 backdrop-blur-sm"
+              >
                 <Users className="h-5 w-5 mr-2" />
                 Join Your Sister Circle
               </Button>
@@ -319,7 +330,7 @@ const StartHere = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default StartHere;
+export default StartHere
