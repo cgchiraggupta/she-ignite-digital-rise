@@ -5,7 +5,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Users, Award, TrendingUp, Mic, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Download, Users, Award, TrendingUp, Mic, Play, ChevronLeft, ChevronRight, Camera, Calendar } from "lucide-react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -265,6 +265,9 @@ const Index = () => {
       {/* Programs Section */}
       <ProgramsShowcase />
 
+      {/* Thin black line divider */}
+      <div className="w-full h-px bg-black opacity-20"></div>
+
       {/* Social Proof Section */}
       <motion.section 
         className="py-20 bg-background"
@@ -279,7 +282,7 @@ const Index = () => {
               Stories of Courage,
               <span className="block text-primary">Journeys of Triumph</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Every success story here represents a brave woman who chose to believe in herself. 
               These are the voices of determination, the proof that your dreams are not just possible—they're inevitable.
             </p>
@@ -324,6 +327,9 @@ const Index = () => {
         </div>
       </motion.section>
 
+      {/* Thin black line divider */}
+      <div className="w-full h-px bg-black opacity-20"></div>
+
       {/* Podcast Section */}
       <motion.section 
         className="py-20 bg-background"
@@ -343,7 +349,7 @@ const Index = () => {
               Heartfelt Conversations – 
               <span className="block text-primary">Voices That Inspire</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Listen to the authentic stories of Indian women entrepreneurs who turned their dreams into reality. 
               Real journeys, genuine struggles, and beautiful victories that will touch your heart and fuel your courage.
             </p>
@@ -409,7 +415,7 @@ const Index = () => {
                   <h3 className="text-lg font-bold mb-2 line-clamp-2">
                     {podcastEpisodes[currentSlide].title}
                   </h3>
-                  <p className="text-muted-foreground text-sm line-clamp-2">
+                  <p className="text-gray-600 text-sm line-clamp-2">
                     {podcastEpisodes[currentSlide].description}
                   </p>
                 </motion.div>
@@ -463,6 +469,9 @@ const Index = () => {
         </div>
       </motion.section>
 
+      {/* Thin black line divider */}
+      <div className="w-full h-px bg-black opacity-20"></div>
+
       {/* SHELeads Platform Section */}
       <motion.section 
         className="py-20 bg-background"
@@ -475,10 +484,14 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div variants={fadeInUp}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                SHELeads
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <div className="mb-6">
+                <img 
+                  src="/she-leads-logo.png" 
+                  alt="SHELeads" 
+                  className="h-16 md:h-20 w-auto"
+                />
+              </div>
+              <p className="text-lg text-gray-700 mb-8">
                 SHELeads has created a business solution specially designed for women entrepreneurs 
                 and professionals with an offering that aims to help them set up their businesses 
                 in the digital world.
@@ -501,7 +514,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <p className="text-muted-foreground mb-6">
+              <p className="text-gray-700 mb-6">
                 This solution and platform is a Win-Win situation for all women entrepreneurs that gives 
                 women entrepreneurs an independent platform to manage and develop their online E-commerce 
                 business under the guidance and training of expert professionals while also giving them 
@@ -550,7 +563,7 @@ const Index = () => {
                     />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">Mentoring</h3>
-                  <p className="text-xs text-gray-600">Expert guidance to accelerate your business growth</p>
+                  <p className="text-sm text-gray-800">Expert guidance to accelerate your business growth</p>
                 </motion.div>
 
                 {/* Networking */}
@@ -572,7 +585,7 @@ const Index = () => {
                     />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">Networking</h3>
-                  <p className="text-xs text-gray-600">Connect with like-minded women entrepreneurs</p>
+                  <p className="text-sm text-gray-800">Connect with like-minded women entrepreneurs</p>
                 </motion.div>
 
                 {/* Building Website */}
@@ -589,7 +602,7 @@ const Index = () => {
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">Building Website</h3>
-                  <p className="text-xs text-gray-600">Create your professional online presence</p>
+                  <p className="text-sm text-gray-800">Create your professional online presence</p>
                 </motion.div>
 
                 {/* Market Place */}
@@ -611,13 +624,16 @@ const Index = () => {
                     />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">Market Place</h3>
-                  <p className="text-xs text-gray-600">Exclusive platform for women-led businesses</p>
+                  <p className="text-sm text-gray-800">Exclusive platform for women-led businesses</p>
                 </motion.div>
               </div>
             </motion.div>
           </div>
         </div>
       </motion.section>
+
+      {/* Thin black line divider */}
+      <div className="w-full h-px bg-black opacity-20"></div>
 
       {/* Media Coverage & Recognition */}
       <motion.section 
@@ -632,7 +648,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Media Coverage & Recognition
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our work has been recognized by leading publications and organizations 
               across India.
             </p>
@@ -746,6 +762,123 @@ const Index = () => {
         </div>
       </motion.section>
 
+      {/* Thin black line divider */}
+      <div className="w-full h-px bg-black opacity-20"></div>
+
+      {/* Event Gallery Section */}
+      <motion.section 
+        className="py-20 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-10%" }}
+        variants={fadeInUp}
+      >
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" variants={fadeInUp}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Photos of Our Events
+              <span className="block text-primary">Creating Memories Together</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Glimpses from our inspiring workshops, networking events, and community gatherings
+            </p>
+          </motion.div>
+
+          {/* Gallery Grid - 4 photos + Join Event CTA */}
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+          >
+            {/* Photo 1 */}
+            <motion.div 
+              className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+            >
+              <img
+                src="/media/DSC02058.JPG"
+                alt="Event photo 1"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </motion.div>
+
+            {/* Photo 2 */}
+            <motion.div 
+              className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+            >
+              <img
+                src="/media/DSC02132.JPG"
+                alt="Event photo 2"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </motion.div>
+
+            {/* Photo 3 */}
+            <motion.div 
+              className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+            >
+              <img
+                src="/media/IMG_0013.JPG"
+                alt="Event photo 3"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </motion.div>
+
+            {/* Photo 4 */}
+            <motion.div 
+              className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+            >
+              <img
+                src="/media/DSC02233.JPG"
+                alt="Event photo 4"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </motion.div>
+
+            {/* Join Next Event CTA */}
+            <motion.div 
+              className="aspect-square bg-gradient-to-br from-primary to-primary/80 rounded-lg flex flex-col items-center justify-center text-white shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer"
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05, y: -2 }}
+              onClick={() => window.location.href = '/events-gallery'}
+            >
+              <Calendar className="h-8 w-8 mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-center text-sm font-medium px-4 leading-tight">
+                Join Our
+                <br />
+                <span className="font-bold">Next Event</span>
+              </p>
+              <ArrowRight className="h-4 w-4 mt-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.div>
+          </motion.div>
+
+          {/* Watch All Photos Button */}
+          <motion.div className="text-center" variants={fadeInUp}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Button asChild variant="outline" size="lg" className="group">
+                <Link to="/events-gallery">
+                  <Camera className="h-5 w-5 mr-2" />
+                  Watch All Photos
+                  <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
       {/* Lead Magnets Section */}
       <motion.section 
         className="py-20 bg-gray-50"
@@ -760,7 +893,7 @@ const Index = () => {
               Sacred Tools to Begin
               <span className="block text-primary">Your Beautiful Journey</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Embrace these carefully crafted resources designed to honor your dreams 
               and guide your first steps toward entrepreneurial success.
             </p>
@@ -791,7 +924,7 @@ const Index = () => {
                       <IconComponent className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4">{magnet.title}</h3>
-                    <p className="text-muted-foreground mb-8 flex-1">{magnet.description}</p>
+                    <p className="text-gray-600 mb-8 flex-1">{magnet.description}</p>
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
@@ -819,7 +952,7 @@ const Index = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Honor Your Entrepreneurial Dreams?
             </h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Join a growing sisterhood of Indian women entrepreneurs who've chosen courage over comfort 
               and are building businesses that celebrate both success and values. Your transformation begins with one brave step.
             </p>

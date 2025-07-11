@@ -19,6 +19,7 @@ import TrainingDetails from "./pages/TrainingDetails";
 import TrainingRegistration from "./pages/TrainingRegistration";
 import AdminPanel from "./pages/AdminPanel";
 import Podcast from "./pages/Podcast";
+import EventsGallery from "./pages/EventsGallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/training/:trainingId" element={<TrainingDetails />} />
           <Route path="/training/:trainingId/register" element={<TrainingRegistration />} />
           <Route path="/podcast" element={<Podcast />} />
+          <Route path="/events-gallery" element={<EventsGallery />} />
           <Route path="/admin" element={<AdminPanel />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
