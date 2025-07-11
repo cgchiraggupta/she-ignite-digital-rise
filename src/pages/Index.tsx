@@ -5,7 +5,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Users, Award, TrendingUp, Mic, Play } from "lucide-react";
+import { ArrowRight, Download, Users, Award, TrendingUp, Mic, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -17,6 +17,10 @@ const Index = () => {
   // Podcast carousel state
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  
+  // Media carousel state
+  const [mediaCurrentSlide, setMediaCurrentSlide] = useState(0);
+  const [isMediaAutoPlaying, setIsMediaAutoPlaying] = useState(true);
   
   const podcastEpisodes = [
     {
@@ -49,6 +53,44 @@ const Index = () => {
     }
   ];
 
+  const mediaFeatures = [
+    {
+      name: "United News of India",
+      url: "https://www.uniindia.com/empowerher24-of-sheleads-on-the-mission-to-transfoming-future-of-women-entrepreneurs/business-wire-india/news/3349214.html",
+      logo: "/media/united news of india.jpg"
+    },
+    {
+      name: "WN.com",
+      url: "https://article.wn.com/view/2024/12/19/EmpowerHER24_of_SHELeads_On_the_Mission_to_Transfoming_Futur/",
+      logo: "/media/wn logo.png"
+    },
+    {
+      name: "Ad Hoc News",
+      url: "https://www.ad-hoc-news.de/boerse/news/marktberichte/empowerher24-of-sheleads-on-the-mission-to-transforming-future-of-women/66321549",
+      logo: "/media/ad hoc news logo.jpg"
+    },
+    {
+      name: "Kalkine Media",
+      url: "https://kalkinemedia.com/in/business/healthcare/empowerher24-of-sheleads-on-the-mission-to-transfoming-future-of-women-entrepreneurs",
+      logo: "/media/kalkine media logo.png"
+    },
+    {
+      name: "Times Tech",
+      url: "https://timestech.in/businesswire/?for=N&Value=vEFxp6Mfc84tqvQIfqcl5QgsAe3llrbC%2fwjjK%2fc81l8bIQhJPPqb97lHYwI%3d",
+      logo: "/media/times tech logo.png"
+    },
+    {
+      name: "IANS Wire Service",
+      url: "https://www.ians.in/business-wire-detail/empowerher24-of-sheleads-on-the-mission-to-transfoming-future-of-women-entrepreneurs-19-12-2024",
+      logo: "/media/ians wire service  logo.png"
+    },
+    {
+      name: "Business News This Week",
+      url: "https://businessnewsthisweek.com/business-wire-listing/?for=N&Value=i%2bty63agk4y3eEYhhJ%2fIwAi9%2fjSGNJ6X4gi0UE8CfEgdDwjJIx4JqC6j%2fAI%3d",
+      logo: "/media/business news this week logo.jpg"
+    }
+  ];
+
   // Auto-play carousel
   useEffect(() => {
     const timer = setInterval(() => {
@@ -76,6 +118,43 @@ const Index = () => {
 
   const handlePlayClick = () => {
     setIsPlaying(true);
+  };
+
+  // Media carousel auto-rotation
+  useEffect(() => {
+    if (!isMediaAutoPlaying) return;
+    
+    const mediaTimer = setInterval(() => {
+      setMediaCurrentSlide((prev) => (prev + 1) % mediaFeatures.length);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(mediaTimer);
+  }, [isMediaAutoPlaying, mediaFeatures.length]);
+
+  // Get visible media items for carousel (3 at a time on desktop, middle one changes)
+  const getVisibleMediaItems = () => {
+    const leftIndex = (mediaCurrentSlide - 1 + mediaFeatures.length) % mediaFeatures.length;
+    const centerIndex = mediaCurrentSlide;
+    const rightIndex = (mediaCurrentSlide + 1) % mediaFeatures.length;
+    
+    return [
+      mediaFeatures[leftIndex],
+      mediaFeatures[centerIndex],
+      mediaFeatures[rightIndex]
+    ];
+  };
+
+  // Media navigation functions
+  const goToMediaSlide = (index: number) => {
+    setMediaCurrentSlide(index);
+  };
+
+  const nextMediaSlide = () => {
+    setMediaCurrentSlide((prev) => (prev + 1) % mediaFeatures.length);
+  };
+
+  const prevMediaSlide = () => {
+    setMediaCurrentSlide((prev) => (prev - 1 + mediaFeatures.length) % mediaFeatures.length);
   };
 
   const fadeInUp = {
@@ -125,22 +204,22 @@ const Index = () => {
 
   const testimonials = [
     {
-      quote: "SHELeadsIndia didn't just teach me digital marketing—they helped me rediscover my confidence as an Indian woman in business. Today, my home-grown brand reaches families across Maharashtra, staying true to our values while embracing innovation.",
-      author: "Priya Sharma",
-      title: "Founder, Eco-Friendly Home Products",
+      quote: "From running a traditional atta chakki to pitching on Shark Tank India - SHELeadsIndia helped me transform my business and navigate entrepreneurship challenges. This incredible journey taught me that with passion and determination, dreams truly have no limits!",
+      author: "Sangeeta",
+      title: "From Atta Chakki to Shark Tank",
+      city: "Mumbai"
+    },
+    {
+      quote: "Building my makeup artistry brand in the competitive beauty industry was challenging until SHELeadsIndia showed me how to blend creativity with smart business strategies. Now I'm living my passion while inspiring the next generation of artists!",
+      author: "Payaal Jain",
+      title: "Professional Makeup Artist & Entrepreneur",
       city: "Pune"
     },
     {
-      quote: "Here, I found more than business strategies—I found a sisterhood. The woman sitting beside me at our first meetup became my business partner, and together we're creating solutions that make our community proud.",
-      author: "Anita Desai",
-      title: "Co-founder, Tech Solutions",
-      city: "Nagpur"
-    },
-    {
-      quote: "As a young mother from Nashik, I thought my entrepreneurial dreams would have to wait. SHELeadsIndia showed me how to build a thriving business from home, honoring both my family values and my ambitions.",
-      author: "Meera Patel",
-      title: "Fashion Brand Owner",
-      city: "Nashik"
+      quote: "Breaking into the male-dominated legal industry while building my YouTube presence felt impossible until SHELeadsIndia showed me the path forward. Now I successfully balance my RERA expertise with content creation, empowering women through legal education every single day!",
+      author: "Adv. Amruta Salunke",
+      title: "RERA Expert, Lawyer & YouTuber",
+      city: "Pune"
     }
   ];
 
@@ -164,6 +243,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <style>
+        {`
+          @keyframes popupSubtle {
+            0%, 100% { 
+              transform: scale(1) translateY(0px); 
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+            50% { 
+              transform: scale(1.05) translateY(-5px); 
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 20px rgba(230, 0, 35, 0.2);
+            }
+          }
+        `}
+      </style>
       <Navigation />
       
       {/* Hero Section */}
@@ -220,9 +313,11 @@ const Index = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <Button variant="hero" size="xl" className="group">
-                Read More Success Stories
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Button asChild variant="hero" size="xl" className="group">
+                <Link to="/success-stories">
+                  Read More Success Stories
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </motion.div>
           </motion.div>
@@ -364,6 +459,289 @@ const Index = () => {
                 </Link>
               </Button>
             </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* SHELeads Platform Section */}
+      <motion.section 
+        className="py-20 bg-background"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-10%" }}
+        variants={fadeInUp}
+      >
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div variants={fadeInUp}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                SHELeads
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                SHELeads has created a business solution specially designed for women entrepreneurs 
+                and professionals with an offering that aims to help them set up their businesses 
+                in the digital world.
+              </p>
+              
+              <h3 className="text-2xl font-semibold mb-6">What makes it different?</h3>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
+                    <span className="text-primary-foreground text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-foreground">Created Exclusively for Women to grow in business</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
+                    <span className="text-primary-foreground text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-foreground">Empowering Women To Take their Business to the next level and help them create great Success Stories</span>
+                </div>
+              </div>
+
+              <p className="text-muted-foreground mb-6">
+                This solution and platform is a Win-Win situation for all women entrepreneurs that gives 
+                women entrepreneurs an independent platform to manage and develop their online E-commerce 
+                business under the guidance and training of expert professionals while also giving them 
+                their own e-commerce web store to do business and direct interact with customers without 
+                any third party involvement.
+              </p>
+
+              <div className="mb-8">
+                <h4 className="text-xl font-semibold mb-4">The platform provides access to:</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>A Networking Platform with other entrepreneurs</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>A Digital Market Place exclusively for women entrepreneurs</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Website Development at a Nominal Charge</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Content - Features Grid */}
+            <motion.div variants={fadeInUp}>
+              <div className="grid grid-cols-2 gap-6">
+                {/* Mentoring */}
+                <motion.div 
+                  className="bg-white rounded-2xl p-4 text-center hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="w-full h-48 rounded-xl mb-3 overflow-hidden bg-gray-50">
+                    <img 
+                      src="/media/Mentoring.JPG" 
+                      alt="Mentoring" 
+                      className="w-full h-full object-cover object-center"
+                      style={{
+                        filter: 'brightness(0.75) contrast(1.15) saturate(1.1)',
+                        imageRendering: 'crisp-edges',
+                        transition: 'none'
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">Mentoring</h3>
+                  <p className="text-xs text-gray-600">Expert guidance to accelerate your business growth</p>
+                </motion.div>
+
+                {/* Networking */}
+                <motion.div 
+                  className="bg-white rounded-2xl p-4 text-center hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="w-full h-48 rounded-xl mb-3 overflow-hidden bg-gray-50">
+                    <img 
+                      src="/media/networking.JPG" 
+                      alt="Networking" 
+                      className="w-full h-full object-cover object-center"
+                      style={{
+                        filter: 'brightness(0.7) contrast(1.2) saturate(1.1)',
+                        imageRendering: 'crisp-edges',
+                        transition: 'none'
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">Networking</h3>
+                  <p className="text-xs text-gray-600">Connect with like-minded women entrepreneurs</p>
+                </motion.div>
+
+                {/* Building Website */}
+                <motion.div 
+                  className="bg-white rounded-2xl p-4 text-center hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl mb-3 flex items-center justify-center">
+                    <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center shadow-md">
+                      <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">Building Website</h3>
+                  <p className="text-xs text-gray-600">Create your professional online presence</p>
+                </motion.div>
+
+                {/* Market Place */}
+                <motion.div 
+                  className="bg-white rounded-2xl p-4 text-center hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="w-full h-48 rounded-xl mb-3 overflow-hidden bg-gray-50">
+                    <img 
+                      src="/media/market-place.JPG" 
+                      alt="Market Place" 
+                      className="w-full h-full object-cover object-center"
+                      style={{
+                        filter: 'brightness(0.75) contrast(1.15) saturate(1.1)',
+                        imageRendering: 'crisp-edges',
+                        transition: 'none'
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">Market Place</h3>
+                  <p className="text-xs text-gray-600">Exclusive platform for women-led businesses</p>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Media Coverage & Recognition */}
+      <motion.section 
+        className="py-20 bg-gray-50"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-10%" }}
+        variants={fadeInUp}
+      >
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" variants={fadeInUp}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Media Coverage & Recognition
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our work has been recognized by leading publications and organizations 
+              across India.
+            </p>
+          </motion.div>
+
+          {/* Media Carousel */}
+          <motion.div 
+            className="relative"
+            variants={fadeInUp}
+            onMouseEnter={() => setIsMediaAutoPlaying(false)}
+            onMouseLeave={() => setIsMediaAutoPlaying(true)}
+          >
+            {/* Carousel Content */}
+            <div className="overflow-visible py-8">
+              <div className="flex transition-transform duration-500 ease-in-out">
+                {/* Desktop View - 3 items */}
+                <div className="hidden lg:flex w-full gap-8 items-center justify-center">
+                  {getVisibleMediaItems().map((publication, index) => (
+                    <motion.a 
+                      key={`${mediaCurrentSlide}-${index}`}
+                      href={publication.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-white p-6 rounded-2xl text-center shadow-md hover:shadow-xl transition-all duration-300 block group border border-gray-100 hover:border-primary/30"
+                      style={index === 1 ? {
+                        animation: 'popupSubtle 3s ease-in-out infinite'
+                      } : {}}
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="flex flex-col items-center justify-center h-full">
+                        <div className="w-full h-20 mb-4 flex items-center justify-center">
+                          <img 
+                            src={publication.logo} 
+                            alt={publication.name}
+                            className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className={`font-medium text-sm transition-colors duration-300 ${
+                          index === 1 ? 'text-primary' : 'text-gray-600 group-hover:text-primary'
+                        }`}>
+                          {publication.name}
+                        </div>
+                      </div>
+                    </motion.a>
+                  ))}
+                </div>
+
+                {/* Mobile/Tablet View - 1 item */}
+                <div className="lg:hidden flex justify-center w-full py-4">
+                  {[mediaFeatures[mediaCurrentSlide]].map((publication, index) => (
+                    <motion.a 
+                      key={`mobile-${mediaCurrentSlide}-${index}`}
+                      href={publication.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-white p-6 rounded-2xl text-center shadow-md hover:shadow-xl transition-all duration-300 block group border border-gray-100 hover:border-primary/30 max-w-md w-full"
+                      style={{
+                        animation: 'popupSubtle 3s ease-in-out infinite'
+                      }}
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="flex flex-col items-center justify-center h-full">
+                        <div className="w-full h-20 mb-4 flex items-center justify-center">
+                          <img 
+                            src={publication.logo} 
+                            alt={publication.name}
+                            className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="font-medium text-sm text-primary transition-colors duration-300">
+                          {publication.name}
+                        </div>
+                      </div>
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevMediaSlide}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-300"
+            >
+              <ChevronLeft className="h-4 w-4 text-gray-600" />
+            </button>
+            <button
+              onClick={nextMediaSlide}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-300"
+            >
+              <ChevronRight className="h-4 w-4 text-gray-600" />
+            </button>
+
+            {/* Carousel Dots */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {mediaFeatures.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToMediaSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === mediaCurrentSlide 
+                      ? 'bg-primary scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
           </motion.div>
         </div>
       </motion.section>

@@ -9,79 +9,79 @@ import { ArrowRight, TrendingUp, Users, Award, MapPin } from "lucide-react";
 const SuccessStories = () => {
   const featuredStories = [
     {
-      name: "Priya Sharma",
-      business: "Eco-Friendly Home Products",
+      name: "Sangeeta",
+      business: "From Atta Chakki to Shark Tank",
+      city: "Mumbai",
+      results: "Traditional business to national TV platform",
+      image: "/media/sangeeta%20sucess.avif",
+      story: "From running a traditional atta chakki to pitching on Shark Tank India - SHELeadsIndia helped me transform my business and navigate entrepreneurship challenges. This incredible journey taught me that with passion and determination, dreams truly have no limits!",
+      metrics: {
+        achievement: "Shark Tank India Pitch",
+        transformation: "Traditional to Modern Business",
+        impact: "Inspiring Entrepreneur"
+      }
+    },
+    {
+      name: "Payaal Jain",
+      business: "Professional Makeup Artist & Entrepreneur",
       city: "Pune",
-      results: "From dreams to ₹50L revenue in 8 months",
-      image: "/api/placeholder/120/120",
-      story: "As a mother who believed in sustainable living, I dreamed of creating products that would make a difference. SHELeadsIndia didn't just teach me digital marketing—they helped me find my voice as an Indian woman entrepreneur. The AI tools became my trusted assistants, and the sisterhood gave me courage I never knew I had. Today, families across Maharashtra choose my products for healthier homes!",
+      results: "Built thriving makeup artistry brand",
+      image: "/api/placeholder/300/300",
+      story: "Building my makeup artistry brand in the competitive beauty industry was challenging until SHELeadsIndia showed me how to blend creativity with smart business strategies. Now I'm living my passion while inspiring the next generation of artists!",
       metrics: {
-        revenue: "500% growth with purpose",
-        customers: "2,500+ families served",
-        team: "5 women empowered with employment"
+        business: "Thriving Makeup Brand",
+        impact: "Inspiring Next Generation",
+        growth: "Creative + Business Success"
       }
     },
     {
-      name: "Anita Desai",
-      business: "Tech Solutions for SMEs",
-      city: "Nagpur",
-      results: "Scaled to 6-figure business with authenticity",
-      image: "/api/placeholder/120/120",
-      story: "As a software engineer turned entrepreneur, I had the technical knowledge but lacked the confidence to put myself out there. The mentorship program connected me with a sister who understood my journey intimately. Through authentic relationship-building and values-driven strategies, I found my first major clients and created recurring revenue streams that honor both innovation and tradition.",
+      name: "Adv. Amruta Salunke",
+      business: "RERA Expert, Lawyer & YouTuber",
+      city: "Pune",
+      results: "Successfully balanced law practice with content creation",
+      image: "/media/Adv. Amruta Salunke.jpg",
+      story: "Breaking into the male-dominated legal industry while building my YouTube presence felt impossible until SHELeadsIndia showed me the path forward. Now I successfully balance my RERA expertise with content creation, empowering women through legal education every single day!",
       metrics: {
-        revenue: "₹12L annual revenue with integrity",
-        clients: "25+ businesses transformed",
-        partnership: "Found my business sister through SHE community"
-      }
-    },
-    {
-      name: "Meera Patel",
-      business: "Sustainable Fashion Brand",
-      city: "Nashik",
-      results: "Built 50K authentic community organically",
-      image: "/api/placeholder/120/120",
-      story: "My fashion brand represented my heritage and values, but I struggled to share this story effectively. The digital mastery program taught me content strategies rooted in authenticity rather than tactics. I learned to use AI as a tool for creativity, not replacement, and built genuine connections with women who share my values. Now customers across India celebrate sustainable fashion through my brand!",
-      metrics: {
-        followers: "50K+ community members",
-        engagement: "8.5% authentic engagement",
-        sales: "200+ monthly orders with love"
+        expertise: "RERA Legal Expert",
+        platform: "YouTube Content Creator",
+        mission: "Empowering Women Daily"
       }
     }
   ];
 
   const quickTestimonials = [
     {
-      quote: "The wisdom shared here doesn't just improve your business metrics—it transforms how you see yourself as a leader.",
+      quote: "The ROI tracking methods alone paid for the entire course within the first month.",
       author: "Rajani Kulkarni",
       title: "Digital Marketing Agency Owner",
       city: "Pune"
     },
     {
-      quote: "I found not just a business partner, but a sister who shares my vision. Together we're creating solutions our community needs.",
+      quote: "I found my business co-founder at a SHE networking event. We've now launched two successful ventures together.",
       author: "Kavitha Rao",
       title: "Tech Startup Co-founder",
       city: "Nagpur"
     },
     {
-      quote: "The personal branding guidance helped me present my authentic self confidently. My ideal clients started finding me naturally.",
+      quote: "The personal branding workshop transformed how I present myself online. My client inquiries tripled!",
       author: "Sunita Joshi",
       title: "Business Consultant",
       city: "Nashik"
     },
     {
-      quote: "From feeling lost as a freelancer to leading an agency with purpose. The mentorship program honored who I am while nurturing who I'm becoming.",
+      quote: "From struggling freelancer to agency owner in 18 months. The mentorship program changed everything.",
       author: "Pooja Mehta",
       title: "Digital Agency Founder",
       city: "Pune"
     },
     {
-      quote: "The AI automation tools respect my time and family priorities. Technology serves my life's balance, not the other way around.",
+      quote: "The AI automation tools they taught me now handle 80% of my marketing. I finally have my life back!",
       author: "Deepika Singh",
       title: "E-commerce Store Owner",
       city: "Nagpur"
     },
     {
-      quote: "This sisterhood celebrates your uniqueness and supports your journey without judgment. It's sacred space for growth.",
+      quote: "The community connections are invaluable. These women celebrate your wins and support you through challenges.",
       author: "Neha Agarwal",
       title: "Health & Wellness Coach",
       city: "Nashik"
@@ -103,12 +103,12 @@ const SuccessStories = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Courage Creates Change,
-              <span className="block">Dreams Become Reality</span>
+              Real Women,
+              <span className="block">Real Transformations</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              These are not just business victories—they are stories of Indian women who chose to believe 
-              in themselves, honoring their roots while reaching for their dreams.
+              These aren't just success stories—they're proof that with the right guidance 
+              and community, any woman can build the business of her dreams.
             </p>
           </div>
         </div>
@@ -141,10 +141,10 @@ const SuccessStories = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Journeys of Heart and Success
+              Transformation Stories
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Meet the women who honored their dreams with courage and built businesses that celebrate both purpose and prosperity.
+              Meet the women who dared to dream big and built businesses that matter.
             </p>
           </div>
 
@@ -182,8 +182,48 @@ const SuccessStories = () => {
                     </div>
                     
                     <div className="bg-gradient-section p-8 lg:p-12 flex items-center justify-center">
-                      <div className="w-48 h-48 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(230, 0, 35, 0.1)' }}>
-                        <Users className="h-24 w-24" style={{ color: 'rgba(230, 0, 35, 0.3)' }} />
+                      <div className="w-80 h-56 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white relative">
+                        {story.image.includes('placeholder') ? (
+                          <div className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
+                            <Users className="h-24 w-24 text-primary/50" />
+                          </div>
+                        ) : (
+                          <img 
+                            src={story.image} 
+                            alt={story.name}
+                            className="w-full h-full"
+                            style={{
+                              objectFit: 'contain',
+                              objectPosition: 'center center',
+                              width: '100%',
+                              height: '100%',
+                              display: 'block'
+                            }}
+                            onError={(e) => {
+                              // Fallback to a styled div if image fails to load
+                              const target = e.target as HTMLImageElement;
+                              console.log('Image failed to load:', story.image);
+                              const parent = target.parentElement;
+                              if (parent) {
+                                parent.innerHTML = `
+                                  <div class="w-full h-full bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
+                                    <div class="text-center">
+                                      <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                                        <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                        </svg>
+                                      </div>
+                                      <div class="text-xs font-medium text-gray-600">${story.name}</div>
+                                    </div>
+                                  </div>
+                                `;
+                              }
+                            }}
+                            onLoad={() => {
+                              console.log('Image loaded successfully:', story.image);
+                            }}
+                          />
+                        )}
                       </div>
                     </div>
                   </div>

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import AnimatedCounter from "@/components/AnimatedCounter";
 // Using direct path to media folder image
 
@@ -151,8 +152,10 @@ const HeroSection = () => {
               }}
               transition={{ duration: 0.3 }}
             >
-              <Button variant="white" size="xl" className="w-full sm:w-auto">
-                Watch Success Stories
+              <Button asChild variant="white" size="xl" className="w-full sm:w-auto">
+                <Link to="/success-stories">
+                  Watch Success Stories
+                </Link>
               </Button>
             </motion.div>
           </motion.div>

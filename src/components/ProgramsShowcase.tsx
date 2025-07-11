@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Brain, Rocket, ArrowRight } from "lucide-react";
-import digitalTrainingImage from "@/assets/digital-training.jpg";
 
 const ProgramsShowcase = () => {
   const programs = [
@@ -123,8 +122,8 @@ const ProgramsShowcase = () => {
           </div>
           <div className="relative">
             <img
-              src={digitalTrainingImage}
-              alt="Digital Marketing Training"
+              src="/media/digital wisdom.JPG"
+              alt="Digital Wisdom Training"
               className="rounded-lg shadow-card"
             />
                             <div className="absolute inset-0 rounded-lg" style={{ background: 'linear-gradient(to top, rgba(230, 0, 35, 0.2), transparent)' }} />

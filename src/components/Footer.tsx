@@ -1,10 +1,26 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MapPin, Mail, Phone, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
+import { MapPin, Mail, Phone, Instagram, Linkedin, Youtube } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-300">
+      {/* Contact Form Section */}
+      <section className="bg-black py-16 border-b border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Let's Start Your Journey Together
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Ready to transform your dreams into reality? Get in touch and let's create something beautiful together.
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+      </section>
+
       <div className="container mx-auto px-4 py-6">
         <div className="grid md:grid-cols-4 gap-6">
           <div className="space-y-4">
@@ -58,14 +74,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a 
-                  href="https://g.co/kgs/1PiYFqt" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-300 transition-colors hover:text-[#E60023]"
+                <button 
+                  onClick={() => document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-gray-300 transition-colors hover:text-[#E60023] text-left"
                 >
                   Contact
-                </a>
+                </button>
               </li>
               <li>
                 <Link to="/privacy-policy" className="text-gray-300 transition-colors hover:text-[#E60023]">
@@ -99,9 +113,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 transition-colors hover:text-[#E60023]">
+                <button 
+                  onClick={() => document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-gray-300 transition-colors hover:text-[#E60023] text-left"
+                >
                   Contact
-                </Link>
+                </button>
               </li>
               <li>
                 <Link to="/events" className="text-gray-300 transition-colors hover:text-[#E60023]">
@@ -119,18 +136,36 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-white text-base mb-2">Connect</h4>
             <div className="flex space-x-2 mb-3">
-              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
-                <Facebook className="h-3 w-3" />
-              </Button>
-              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
-                <Youtube className="h-3 w-3" />
-              </Button>
-              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
-                <Instagram className="h-3 w-3" />
-              </Button>
-              <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-gray-800 text-gray-300 hover:text-white h-8 w-8 p-0">
-                <Linkedin className="h-3 w-3" />
-              </Button>
+              <a 
+                href="https://www.linkedin.com/company/sheleadsindia/?originalSubdomain=in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex"
+              >
+                <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600 text-gray-300 hover:text-white h-8 w-8 p-0 transition-colors duration-300">
+                  <Linkedin className="h-3 w-3" />
+                </Button>
+              </a>
+              <a 
+                href="https://www.instagram.com/sheleadsofficial2023/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex"
+              >
+                <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-pink-600 hover:border-pink-600 text-gray-300 hover:text-white h-8 w-8 p-0 transition-colors duration-300">
+                  <Instagram className="h-3 w-3" />
+                </Button>
+              </a>
+              <a 
+                href="https://www.youtube.com/@SHELeadsIndia" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex"
+              >
+                <Button variant="ghost" size="sm" className="rounded-full border border-gray-600 hover:bg-red-600 hover:border-red-600 text-gray-300 hover:text-white h-8 w-8 p-0 transition-colors duration-300">
+                  <Youtube className="h-3 w-3" />
+                </Button>
+              </a>
             </div>
             <p className="text-gray-300 text-xs leading-relaxed">
               The sacred mission of SHELeads is to nurture and celebrate the dreams of Indian women entrepreneurs, creating a sisterhood where tradition meets innovation and success honors our roots.
