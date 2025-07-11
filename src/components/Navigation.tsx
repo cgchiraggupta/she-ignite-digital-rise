@@ -13,7 +13,6 @@ const Navigation = () => {
     { name: "Start Here", href: "/start-here" },
     { name: "Programs", href: "/programs" },
     { name: "Upcoming Training", href: "/upcoming-training" },
-    { name: "Resources", href: "/resources" },
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
     { name: "Events", href: "/events" },
@@ -66,9 +65,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <Button variant="hero" size="sm">
-                Begin Your Journey
-              </Button>
+            
             </motion.div>
           </div>
 
