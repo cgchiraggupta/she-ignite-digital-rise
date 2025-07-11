@@ -508,7 +508,7 @@ const About = () => {
                        </div>
                      </a>
                    ))}
-                 </div>
+                </div>
               </div>
             </div>
 
@@ -541,7 +541,7 @@ const About = () => {
               ))}
             </div>
 
-                       </div>
+          </div>
         </div>
       </section>
 

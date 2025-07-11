@@ -14,7 +14,7 @@ const Programs = () => {
       price: "₹2,600",
       period: "year",
       badge: "Getting Started",
-      tagline: "For the women just getting started, your first spark of success.",
+      tagline: "For women just getting started, your first spark of success.",
       features: [
         "Weekly live training on digital marketing",
         "Access to our supportive WhatsApp community",
@@ -80,28 +80,28 @@ const Programs = () => {
   ];
 
   const impactPoints = [
-    "Bridge the gap between ambition and execution for women-led businesses.",
-    "Equip women entrepreneurs with hands-on marketing tools and strategies.",
-    "Replace isolation with connection through a thriving business sisterhood.",
-    "Transform learning into implementation through challenges, mentorship, and managed services."
+    "Bridge the gap between ambition and execution",
+    "Provide hands-on marketing tools and strategies",
+    "Build connections through business sisterhood",
+    "Transform learning into real implementation"
   ];
 
   const planRecommendations = [
     {
       plan: "Spark Plan",
-      description: "Perfect for solopreneurs, early-stage founders, or women restarting their careers who want to upskill and get consistent training."
+      description: "Perfect for solopreneurs and early-stage founders who want consistent training and community support."
     },
     {
       plan: "Rise Plan",
-      description: "Ideal for women with an existing business who need strategy + visibility. You're doing the work, but need direction and exposure."
+      description: "Ideal for existing businesses needing strategy and visibility with implementation guidance."
     },
     {
       plan: "Thrive Plan",
-      description: "Best for entrepreneurs with growing teams or consistent revenue, who need personalised mentorship and access to premium tools."
+      description: "Best for growing businesses needing personalized mentorship and premium tool access."
     },
     {
       plan: "Empire Plan",
-      description: "Tailored for established founders ready to outsource their marketing, automate growth, and focus on scaling operations."
+      description: "For established founders ready to outsource marketing and focus on scaling operations."
     }
   ];
 
@@ -124,7 +124,7 @@ const Programs = () => {
         
         <div className="w-full px-4 relative z-10 flex items-center min-h-[50vh]">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 leading-tight drop-shadow-xl" style={{
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6 leading-tight drop-shadow-xl" style={{
               textShadow: '3px 3px 10px rgba(0, 0, 0, 0.9), 2px 2px 6px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5)'
             }}>
               Empowering Women Entrepreneurs with MarTech Mastery
@@ -133,16 +133,8 @@ const Programs = () => {
               <p className="text-base sm:text-lg lg:text-xl mb-6 opacity-95 leading-relaxed font-light drop-shadow-lg" style={{
                 textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 1px 1px 4px rgba(0, 0, 0, 0.6), 0px 0px 2px rgba(0, 0, 0, 0.4)'
               }}>
-                SHELeadsIndia is more than a platform—it is a movement designed exclusively for women 
-                entrepreneurs who want to scale their businesses using modern marketing technology (MarTech). 
-                We are on a mission to create India's largest business growth ecosystem for women-led ventures.
-              </p>
-              <p className="text-base sm:text-lg lg:text-xl opacity-95 leading-relaxed font-light drop-shadow-lg" style={{
-                textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 1px 1px 4px rgba(0, 0, 0, 0.6), 0px 0px 2px rgba(0, 0, 0, 0.4)'
-              }}>
-                Our community brings together women entrepreneurs, MarTech trainers, digital strategists, 
-                and solution providers in one powerful network. We focus on practical, tech-enabled marketing 
-                solutions that drive real business results.
+                A movement for women entrepreneurs to scale businesses using modern marketing technology. 
+                Creating India's largest business growth ecosystem for women-led ventures.
               </p>
             </div>
           </div>
@@ -154,7 +146,7 @@ const Programs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-2xl lg:text-3xl font-semibold mb-4 text-gray-900">
+              <h2 className="text-2xl lg:text-3xl font-light mb-4 text-gray-900">
                 Our Impact Vision
               </h2>
               <p className="text-lg text-gray-600">We aim to:</p>
@@ -164,7 +156,7 @@ const Programs = () => {
               {impactPoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-gray-50">
                   <div className="w-7 h-7 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold text-sm">{index + 1}</span>
+                    <span className="text-white font-normal text-sm">{index + 1}</span>
                   </div>
                   <p className="text-gray-700 leading-relaxed">{point}</p>
                 </div>
@@ -172,8 +164,8 @@ const Programs = () => {
             </div>
 
             <div className="text-center bg-primary/5 p-6 rounded-lg">
-              <p className="text-lg font-semibold text-primary">
-                Our ultimate goal? To help women not just run businesses, but build brands, communities, and legacies.
+              <p className="text-lg font-normal text-primary">
+                Our goal: Help women build brands, communities, and legacies.
               </p>
             </div>
           </div>
@@ -186,18 +178,17 @@ const Programs = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-2 lg:order-1">
-                <h2 className="text-2xl lg:text-3xl font-semibold mb-4 text-gray-900">
+                <h2 className="text-2xl lg:text-3xl font-light mb-4 text-gray-900">
                   Founded by <span className="text-primary">Nikita Vora</span>
                 </h2>
                 <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-6">
-                  A digital marketing consultant, trainer, and visionary behind the SHELeadsIndia movement, 
-                  the platform reflects her deep belief in community-powered growth. With a decade of experience 
-                  in digital marketing and a strong commitment to empowering women, Nikita envisions SHELeadsIndia 
-                  as the go-to business growth hub for every woman entrepreneur in India.
+                  Digital marketing consultant and visionary behind SHELeadsIndia. With a decade of experience 
+                  and commitment to empowering women, Nikita envisions this as the go-to business growth hub 
+                  for every woman entrepreneur in India.
                 </p>
                 <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
-                  <p className="text-base font-medium text-primary italic">
-                    Her philosophy: "Don't just learn marketing—implement it, automate it, and profit from it."
+                  <p className="text-base font-normal text-primary italic">
+                    "Don't just learn marketing—implement it, automate it, and profit from it."
                   </p>
                 </div>
               </div>
@@ -219,7 +210,7 @@ const Programs = () => {
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-4 text-gray-900">
+            <h2 className="text-2xl lg:text-3xl font-light mb-4 text-gray-900">
               Power Play Pricing Model
             </h2>
             <p className="text-lg text-gray-600">
@@ -236,7 +227,7 @@ const Programs = () => {
                     <Card className={`relative flex flex-col h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/50 ${plan.highlight ? "border-2 border-primary shadow-lg ring-1 ring-primary/20" : "border border-gray-200 hover:border-primary/30"}`}>
                       {plan.badge && (
                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                          <Badge className={`${plan.highlight ? "bg-primary text-white" : "bg-gray-800 text-white"} px-3 py-1 text-xs font-semibold whitespace-nowrap transition-all duration-300 group-hover:scale-105`}>
+                          <Badge className={`${plan.highlight ? "bg-primary text-white" : "bg-gray-800 text-white"} px-3 py-1 text-xs font-normal whitespace-nowrap transition-all duration-300 group-hover:scale-105`}>
                             {plan.badge}
                       </Badge>
                     </div>
@@ -246,11 +237,11 @@ const Programs = () => {
                         <div className={`w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 ${plan.color} transition-all duration-300 group-hover:scale-110`}>
                           <IconComponent className="h-8 w-8 text-primary transition-all duration-300" />
                     </div>
-                        <CardTitle className="text-xl font-bold mb-2 text-gray-900 transition-colors duration-300 group-hover:text-primary">{plan.name}</CardTitle>
+                        <CardTitle className="text-xl font-normal mb-2 text-gray-900 transition-colors duration-300 group-hover:text-primary">{plan.name}</CardTitle>
                         
                         <div className="mb-4">
                           <div className="flex items-baseline justify-center gap-1">
-                            <span className="text-3xl font-bold text-primary transition-all duration-300 group-hover:scale-105">{plan.price}</span>
+                            <span className="text-3xl font-normal text-primary transition-all duration-300 group-hover:scale-105">{plan.price}</span>
                             <span className="text-sm text-gray-500">/{plan.period}</span>
                       </div>
                     </div>
@@ -272,7 +263,7 @@ const Programs = () => {
 
                     <Button 
                           variant={plan.highlight ? "default" : "outline"} 
-                          className={`w-full py-3 text-sm font-semibold mt-auto transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                          className={`w-full py-3 text-sm font-normal mt-auto transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                             plan.highlight 
                               ? "bg-primary hover:bg-primary/90 text-white shadow-md hover:shadow-lg" 
                               : "hover:bg-primary hover:text-white hover:border-primary"
@@ -301,7 +292,7 @@ const Programs = () => {
       <section className="py-12 lg:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-8 text-center text-gray-900">
+            <h2 className="text-2xl lg:text-3xl font-light mb-8 text-center text-gray-900">
               Plan Recommendations
             </h2>
             
@@ -311,7 +302,7 @@ const Programs = () => {
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <h3 className="text-lg font-bold text-primary mb-2">{rec.plan}:</h3>
+                      <h3 className="text-lg font-normal text-primary mb-2">{rec.plan}:</h3>
                       <p className="text-gray-700 leading-relaxed">{rec.description}</p>
               </div>
               </div>
@@ -337,7 +328,7 @@ const Programs = () => {
         
         <div className="w-full px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl lg:text-3xl font-medium mb-6 drop-shadow-xl" style={{
+            <h3 className="text-2xl lg:text-3xl font-light mb-6 drop-shadow-xl" style={{
               textShadow: '3px 3px 10px rgba(0, 0, 0, 0.9), 2px 2px 6px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5)'
             }}>
               Ready to Lead?
@@ -351,7 +342,7 @@ const Programs = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-2 border-white text-white hover:bg-white hover:text-primary font-medium py-3 px-6 shadow-lg transition-all duration-200 bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary font-normal py-3 px-6 shadow-lg transition-all duration-200 bg-transparent"
                 style={{
                   borderColor: 'white',
                   color: 'white'
@@ -371,7 +362,7 @@ const Programs = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-2 border-white text-white hover:bg-white hover:text-primary font-medium py-3 px-6 shadow-lg transition-all duration-200 bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary font-normal py-3 px-6 shadow-lg transition-all duration-200 bg-transparent"
                 style={{
                   borderColor: 'white',
                   color: 'white'

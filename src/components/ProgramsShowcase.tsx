@@ -6,9 +6,9 @@ const ProgramsShowcase = () => {
   const programs = [
     {
       icon: Users,
-      title: "Sister-to-Sister Mentorship",
-      description: "Walk alongside women who've transformed their lives and businesses, learning not just strategies but the courage to dream bigger.",
-      features: ["Heart-to-heart strategy sessions", "Authentic brand story development", "Values-driven growth roadmap", "Sisterhood network access"],
+      title: "Personalized Mentorship Program",
+      description: "Transform your business with guidance from successful women entrepreneurs. Learn proven strategies and gain the confidence to scale your venture.",
+      features: ["One-on-one strategy sessions", "Brand development guidance", "Growth roadmap creation", "Entrepreneur network access"],
       cta: "Begin Your Journey",
       highlight: "Most Cherished"
     },
@@ -22,10 +22,10 @@ const ProgramsShowcase = () => {
     },
     {
       icon: Rocket,
-      title: "The Sisterhood Circle",
-      description: "Find your tribe of ambitious, like-minded women who understand your journey and celebrate your unique path to success.",
-      features: ["Regional sister circles", "Cultural celebration meetups", "Wisdom-sharing sessions", "Success celebration rituals"],
-      cta: "Find Your Tribe",
+      title: "Join Our Community",
+      description: "Connect with ambitious women entrepreneurs who understand your journey. Build meaningful relationships and grow together in a supportive environment.",
+      features: ["Regional networking circles", "Cultural celebration events", "Knowledge sharing sessions", "Success milestone celebrations"],
+      cta: "Join Community",
       highlight: ""
     }
   ];
